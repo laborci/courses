@@ -31,6 +31,8 @@ lines = [
     "  name: material",
     "  language: hu",
     "  features:",
+    "    - navigation.tabs",
+    "    - navigation.tabs.sticky",
     "    - navigation.sections",
     "    - navigation.top",
     "    - navigation.path",
@@ -61,17 +63,32 @@ lines = [
     "  - Kezdőlap: index.md",
 ]
 
-for course in sorted(p for p in DOCS.iterdir() if p.is_dir()):
-    index = course / "index.md"
-    if not index.is_file():
-        raise ValueError(f"Missing course index: {index}")
-    lines += [f"  - {quoted(heading(index))}:", f"      - Áttekintés: {course.name}/index.md"]
-    for language in sorted(p for p in course.iterdir() if p.is_dir()):
-        label = {"hu": "Magyar tananyag", "en": "English materials", "int": "International materials"}.get(language.name, language.name)
-        lines += [f"      - {quoted(label)}:"]
-        for name, label in [("index.md", "Kezdőlap"), ("00-syllabus.md", "Kurzusáttekintő")]:
-            if (language / name).is_file():
-                lines.append(f"          - {quoted(label)}: {course.name}/{language.name}/{name}")
+courses = sorted(p for p in DOCS.iterdir() if p.is_dir() and p.name not in {"hu", "en", "int"})
+for language_name, language_label, home_label, syllabus_label, week_label in [
+    ("hu", "Magyar", "Kezdőlap", "Kurzusáttekintő", "hét"),
+    ("en", "English", "Home", "Syllabus", "Week"),
+]:
+    language_home = DOCS / language_name / "index.md"
+    if not language_home.is_file():
+        continue
+    lines += [f"  - {quoted(language_label)}:", f"      - {quoted(home_label)}: {language_name}/index.md"]
+    for course in courses:
+        language = course / language_name
+        index = language / "index.md"
+        if not index.is_file():
+            continue
+        lines += [f"      - {quoted(heading(index))}:", f"          - {quoted(home_label)}: {course.name}/{language_name}/index.md"]
+        syllabus = language / "00-syllabus.md"
+        short_titles: dict[str, str] = {}
+        if syllabus.is_file():
+            lines.append(f"          - {quoted(syllabus_label)}: {course.name}/{language_name}/00-syllabus.md")
+            short_titles = {
+                filename: label
+                for label, filename in re.findall(
+                    r"\[([^]]+)\]\(([0-9]{2}-[0-9]{2}-[^)]+\.md)\)",
+                    syllabus.read_text(encoding="utf-8"),
+                )
+            }
         chapters = sorted(language.glob("[0-9][0-9]-[0-9][0-9]-*.md"))
         weeks: dict[str, list[Path]] = {}
         for chapter in chapters:
@@ -79,12 +96,11 @@ for course in sorted(p for p in DOCS.iterdir() if p.is_dir()):
                 raise ValueError(f"Instructor presentation must not be published: {chapter}")
             weeks.setdefault(chapter.name[:2], []).append(chapter)
         for week, files in weeks.items():
-            lines += [f"          - {quoted(week + '. hét')}:"]
+            group = f"{week}. {week_label}" if language_name == "hu" else f"{week_label} {int(week)}"
+            lines += [f"          - {quoted(group)}:"]
             for chapter in files:
-                lines.append(
-                    f"              - {quoted(heading(chapter))}: "
-                    f"{course.name}/{language.name}/{chapter.name}"
-                )
+                label = short_titles.get(chapter.name, heading(chapter))
+                lines.append(f"              - {quoted(label)}: {course.name}/{language_name}/{chapter.name}")
 
 (ROOT / "mkdocs.yml").write_text("\n".join(lines) + "\n", encoding="utf-8")
-print(f"Generated navigation for {sum(1 for p in DOCS.iterdir() if p.is_dir())} course(s).")
+print(f"Generated language-first navigation for {len(courses)} course(s).")

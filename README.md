@@ -4,11 +4,13 @@ Hallgatóknak szóló, nyilvános tananyagok egyetlen kereshető weboldalon.
 
 A publikált oldal: https://laborci.github.io/courses/
 
+A felső menüben a nyelvek szerepelnek. A Magyar/English ágak alatt az évvel jelölt tárgyak és azok heti fejezetei jelennek meg. Az angol Web Programming I (2026) jelenleg csak kezdőoldal; az angol fejezetek még nem készültek el az új tananyagsorrendben.
+
 ## Szerkezet
 
 - `docs/index.md`: közös kezdőlap.
-- `docs/<tárgy>/index.md`: tárgy kezdőlapja.
-- `docs/<tárgy>/hu/`: magyar kurzusáttekintő és önálló fejezetek.
+- `docs/hu/` és `docs/en/`: nyelvi kezdőlapok.
+- `docs/<tárgy>/hu/` és később `docs/<tárgy>/en/`: nyelvenkénti kurzusáttekintő és önálló fejezetek.
 - `scripts/import_course.py`: egy helyi kurzus hallgatói anyagainak átvétele.
 - `mkdocs.yml`: a generált navigáció és a megjelenés beállítása.
 
@@ -16,12 +18,12 @@ Az oktatói `HH-00-*.md` PWMD-prezentációk, a `course-plan.md` és más szerke
 
 ## Új tárgy hozzáadása
 
-Másold a hallgatói fájlokat a `docs/<tárgy>/hu/` könyvtárba. A kezdőlap neve `index.md`, az áttekintőé `00-syllabus.md`. A fejezetek a `HH-FF-title.md` mintát követik. A navigációt a `python3 scripts/generate_navigation.py` parancs újragenerálja. Egy új tárgyhoz nem kell új repository vagy külön Pages-oldal.
+Másold a hallgatói fájlokat a `docs/<tárgy>/<nyelv>/` könyvtárba. A kezdőlap neve `index.md`, az áttekintőé `00-syllabus.md`. A fejezetek a `HH-FF-title.md` mintát követik. A navigációt a `python3 scripts/generate_navigation.py` parancs újragenerálja. Egy új tárgyhoz nem kell új repository vagy külön Pages-oldal.
 
 Az itt használt kurzusszerkezetből az importáló script is képes átmásolni a hallgatói fájlokat:
 
 ```sh
-python3 scripts/import_course.py /helyi/kurzus/hu web-programming-1 --title 'Webprogramozás I'
+python3 scripts/import_course.py /helyi/kurzus/hu web-programming-1 --title 'Webprogramozás I (2026)' --language hu
 ```
 
 Az import után ellenőrizd a változásokat, futtasd a helyi buildet, majd commitold és pushold a frissítést. A GitHub Actions automatikusan újraépíti a weboldalt.

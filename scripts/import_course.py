@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import only student-facing Hungarian course Markdown into the public site."""
+"""Import only student-facing course Markdown into the public site."""
 
 import argparse
 import re
@@ -10,9 +10,10 @@ from pathlib import Path
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("source", type=Path, help="Local hu/ directory")
+    parser.add_argument("source", type=Path, help="Local language directory")
     parser.add_argument("slug", help="Course URL segment")
-    parser.add_argument("--title", required=True, help="Hungarian course title")
+    parser.add_argument("--title", required=True, help="Course title in the selected language")
+    parser.add_argument("--language", choices=("hu", "en"), default="hu")
     args = parser.parse_args()
 
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", args.slug):
@@ -22,7 +23,7 @@ def main() -> None:
     if not syllabus.is_file():
         parser.error(f"missing syllabus: {syllabus}")
 
-    destination = Path(__file__).resolve().parents[1] / "docs" / args.slug / "hu"
+    destination = Path(__file__).resolve().parents[1] / "docs" / args.slug / args.language
     destination.mkdir(parents=True, exist_ok=True)
     chapters = sorted(
         f for f in source.glob("[0-9][0-9]-[0-9][0-9]-*.md")
@@ -33,7 +34,7 @@ def main() -> None:
 
     syllabus_text = syllabus.read_text(encoding="utf-8")
     syllabus_text = re.sub(
-        r"(?m)^\[[^\n]*oktatói prezentációja\]\([0-9]{2}-00-[^)]+\.md\)\n?",
+        r"(?m)^\[[^\n]+\]\([0-9]{2}-00-[^)]+\.md\)\n?",
         "",
         syllabus_text,
     )
@@ -50,17 +51,14 @@ def main() -> None:
             parser.error(f"missing H1: {chapter}")
         weeks.setdefault(match.group(1), []).append((title_match.group(1), chapter.name))
 
-    index = [f"# {args.title}", "", "[A kurzus áttekintése](00-syllabus.md)", ""]
+    overview = "A kurzus áttekintése" if args.language == "hu" else "Course overview"
+    week_label = "hét" if args.language == "hu" else "Week"
+    index = [f"# {args.title}", "", f"[{overview}](00-syllabus.md)", ""]
     for week, entries in weeks.items():
-        index += [f"## {week}. hét", ""]
+        index += [f"## {week}. {week_label}" if args.language == "hu" else f"## {week_label} {int(week)}", ""]
         index += [f"- [{title}]({name})" for title, name in entries]
         index += [""]
     (destination / "index.md").write_text("\n".join(index), encoding="utf-8")
-    course_index = destination.parent / "index.md"
-    course_index.write_text(
-        f"# {args.title}\n\n[Magyar tananyag](hu/index.md)\n",
-        encoding="utf-8",
-    )
     subprocess.run([sys.executable, str(Path(__file__).with_name("generate_navigation.py"))], check=True)
     print(f"Imported {len(chapters)} chapters into {destination}")
 

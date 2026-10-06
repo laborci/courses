@@ -1,5 +1,6 @@
-# Tananyagok
+# Tananyagok / Course materials
 
-Az itt található tananyagokat tárgyanként, heti bontásban lehet olvasni és keresni.
+Válassz nyelvet és tárgyat. / Choose a language and course.
 
-- [Webprogramozás I](web-programming-1/hu/index.md) — a web működése, szabványai és minősége.
+- [Magyar — Webprogramozás I (2026)](web-programming-1/hu/index.md)
+- [English — Web Programming I (2026)](web-programming-1/en/index.md)

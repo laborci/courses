@@ -1,4 +1,4 @@
-# Webprogramozás I
+# Webprogramozás I (2026)
 
 [A kurzus áttekintése](00-syllabus.md)
 
