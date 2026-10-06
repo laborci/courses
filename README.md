@@ -4,7 +4,7 @@ Hallgatóknak szóló, nyilvános tananyagok egyetlen kereshető weboldalon.
 
 A publikált oldal: https://laborci.github.io/courses/
 
-A felső menüben a nyelvek szerepelnek. A Magyar/English ágak alatt az évvel jelölt tárgyak és azok heti fejezetei jelennek meg. Az angol Web Programming I (2026) jelenleg csak kezdőoldal; az angol fejezetek még nem készültek el az új tananyagsorrendben.
+A felső menüben a nyelvek szerepelnek. A Magyar/English ágak alatt az évvel jelölt tárgyak és azok heti fejezetei jelennek meg. A Web Programming I (2026) magyar és angol változata egyaránt tíz heti tananyagot tartalmaz.
 
 ## Szerkezet
 

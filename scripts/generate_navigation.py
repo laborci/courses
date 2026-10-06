@@ -22,7 +22,7 @@ def heading(path: Path) -> str:
 
 
 lines = [
-    "site_name: Tananyagok",
+    "site_name: courses",
     "site_description: Egyetemi tananyagok heti bontásban",
     "site_url: https://laborci.github.io/courses/",
     "repo_url: https://github.com/laborci/courses",
@@ -30,6 +30,7 @@ lines = [
     "theme:",
     "  name: material",
     "  language: hu",
+    "  font: false",
     "  features:",
     "    - navigation.tabs",
     "    - navigation.tabs.sticky",
@@ -39,16 +40,11 @@ lines = [
     "    - search.suggest",
     "    - search.highlight",
     "  palette:",
-    "    - media: '(prefers-color-scheme: light)'",
-    "      scheme: default",
-    "      toggle:",
-    "        icon: material/brightness-7",
-    "        name: Sötét mód",
-    "    - media: '(prefers-color-scheme: dark)'",
-    "      scheme: slate",
-    "      toggle:",
-    "        icon: material/brightness-4",
-    "        name: Világos mód",
+    "    scheme: slate",
+    "    primary: custom",
+    "    accent: custom",
+    "extra_css:",
+    "  - stylesheets/extra.css",
     "plugins:",
     "  - search",
     "markdown_extensions:",
@@ -63,7 +59,10 @@ lines = [
     "  - Kezdőlap: index.md",
 ]
 
-courses = sorted(p for p in DOCS.iterdir() if p.is_dir() and p.name not in {"hu", "en", "int"})
+courses = sorted(
+    p for p in DOCS.iterdir()
+    if p.is_dir() and any((p / language).is_dir() for language in ("hu", "en"))
+)
 for language_name, language_label, home_label, syllabus_label, week_label in [
     ("hu", "Magyar", "Kezdőlap", "Kurzusáttekintő", "hét"),
     ("en", "English", "Home", "Syllabus", "Week"),

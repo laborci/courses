@@ -2,5 +2,15 @@
 
 Válassz nyelvet és tárgyat. / Choose a language and course.
 
-- [Magyar — Webprogramozás I (2026)](web-programming-1/hu/index.md)
-- [English — Web Programming I (2026)](web-programming-1/en/index.md)
+<div class="course-grid">
+  <a class="course-card" href="web-programming-1/hu/">
+    <span class="course-badge">Magyar · 2026</span>
+    <strong>Webprogramozás I</strong>
+    <small>A web működése, szabványai és minősége. Tíz hét önálló tananyaggal.</small>
+  </a>
+  <a class="course-card" href="web-programming-1/en/">
+    <span class="course-badge">English · 2026</span>
+    <strong>Web Programming I</strong>
+    <small>How the web works, its standards, and the qualities of reliable services. Ten weeks of course material.</small>
+  </a>
+</div>

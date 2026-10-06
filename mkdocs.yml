@@ -1,4 +1,4 @@
-site_name: Tananyagok
+site_name: courses
 site_description: Egyetemi tananyagok heti bontásban
 site_url: https://laborci.github.io/courses/
 repo_url: https://github.com/laborci/courses
@@ -6,6 +6,7 @@ use_directory_urls: true
 theme:
   name: material
   language: hu
+  font: false
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -15,16 +16,11 @@ theme:
     - search.suggest
     - search.highlight
   palette:
-    - media: '(prefers-color-scheme: light)'
-      scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Sötét mód
-    - media: '(prefers-color-scheme: dark)'
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Világos mód
+    scheme: slate
+    primary: custom
+    accent: custom
+extra_css:
+  - stylesheets/extra.css
 plugins:
   - search
 markdown_extensions:
@@ -116,3 +112,74 @@ nav:
       - "Home": en/index.md
       - "Web Programming I (2026)":
           - "Home": web-programming-1/en/index.md
+          - "Syllabus": web-programming-1/en/00-syllabus.md
+          - "Week 1":
+              - "01.01. The web as a general platform": web-programming-1/en/01-01-web-as-a-platform.md
+              - "01.02. The evolution of the web": web-programming-1/en/01-02-web-evolution.md
+              - "01.03. Main actors of the web": web-programming-1/en/01-03-web-actors.md
+              - "01.04. Client-server model and tiers": web-programming-1/en/01-04-client-server-and-multitier.md
+              - "01.05. Web standards and interoperability": web-programming-1/en/01-05-web-standards-and-interoperability.md
+          - "Week 2":
+              - "02.01. Web addresses and resources": web-programming-1/en/02-01-web-addresses-and-resources.md
+              - "02.02. The HTTP request and response": web-programming-1/en/02-02-http-request-and-response.md
+              - "02.03. HTTP methods": web-programming-1/en/02-03-http-methods.md
+              - "02.04. HTTP status codes": web-programming-1/en/02-04-http-status-codes.md
+              - "02.05. Headers, body, and content types": web-programming-1/en/02-05-headers-body-and-content-types.md
+              - "02.06. Observing a request": web-programming-1/en/02-06-reading-network-panel.md
+          - "Week 3":
+              - "03.01. HTML, CSS, and JavaScript": web-programming-1/en/03-01-html-css-and-javascript.md
+              - "03.02. Document structure, DOM, and semantics": web-programming-1/en/03-02-document-structure-and-dom.md
+              - "03.03. Browser rendering": web-programming-1/en/03-03-browser-rendering.md
+              - "03.04. Loading web resources": web-programming-1/en/03-04-loading-web-resources.md
+              - "03.05. Browser compatibility": web-programming-1/en/03-05-browser-compatibility.md
+              - "03.06. Browser capabilities": web-programming-1/en/03-06-browser-capabilities.md
+          - "Week 4":
+              - "04.01. Domain name, IP address, and DNS": web-programming-1/en/04-01-dns-and-ip-addresses.md
+              - "04.02. Connection establishment, TCP, and TLS": web-programming-1/en/04-02-connection-tcp-and-tls.md
+              - "04.03. Protection and limits of HTTPS": web-programming-1/en/04-03-https-protection-and-limits.md
+              - "04.04. Proxies, reverse proxies, and CDNs": web-programming-1/en/04-04-proxies-and-cdns.md
+              - "04.05. The complete path of a web request": web-programming-1/en/04-05-complete-web-request.md
+              - "04.06. Latency and failures": web-programming-1/en/04-06-latency-and-failures.md
+          - "Week 5":
+              - "05.01. What is a web API?": web-programming-1/en/05-01-what-is-a-web-api.md
+              - "05.02. JSON, XML, and structured data": web-programming-1/en/05-02-json-xml-and-data.md
+              - "05.03. REST and HTTP resources": web-programming-1/en/05-03-rest-and-http-resources.md
+              - "05.04. GraphQL and RPC": web-programming-1/en/05-04-graphql-and-rpc.md
+              - "05.05. Changing data and events": web-programming-1/en/05-05-changing-data-and-events.md
+              - "05.06. Versioning and documentation": web-programming-1/en/05-06-api-evolution-and-documentation.md
+          - "Week 6":
+              - "06.01. Multi-page and single-page applications": web-programming-1/en/06-01-multi-page-and-single-page-apps.md
+              - "06.02. Client-side rendering": web-programming-1/en/06-02-client-side-rendering.md
+              - "06.03. Server-side rendering": web-programming-1/en/06-03-server-side-rendering.md
+              - "06.04. Static and hybrid rendering": web-programming-1/en/06-04-static-rendering-and-hybrids.md
+              - "06.05. Navigation and client-side state": web-programming-1/en/06-05-navigation-and-client-state.md
+              - "06.06. Service worker and offline operation": web-programming-1/en/06-06-service-workers-and-offline.md
+              - "06.07. Choosing an application architecture": web-programming-1/en/06-07-choosing-an-application-architecture.md
+          - "Week 7":
+              - "07.01. Stateless HTTP and application state": web-programming-1/en/07-01-stateless-http-and-application-state.md
+              - "07.02. Cookies and sessions": web-programming-1/en/07-02-cookies-and-sessions.md
+              - "07.03. Browser storage and tokens": web-programming-1/en/07-03-browser-storage-and-tokens.md
+              - "07.04. Authentication and authorization": web-programming-1/en/07-04-authentication-and-authorization.md
+              - "07.05. OAuth 2.0 and OpenID Connect": web-programming-1/en/07-05-oauth-and-openid-connect.md
+              - "07.06. Single and external login": web-programming-1/en/07-06-sso-and-external-login.md
+          - "Week 8":
+              - "08.01. Threat models and trust boundaries": web-programming-1/en/08-01-threat-models-and-trust-boundaries.md
+              - "08.02. Same-origin policy and CORS": web-programming-1/en/08-02-same-origin-policy-and-cors.md
+              - "08.03. XSS, CSRF, and injection": web-programming-1/en/08-03-xss-csrf-and-injection.md
+              - "08.04. Passwords, MFA, and sessions": web-programming-1/en/08-04-passwords-mfa-and-sessions.md
+              - "08.05. The role and limits of HTTPS": web-programming-1/en/08-05-https-and-its-limits.md
+              - "08.06. OWASP and security review": web-programming-1/en/08-06-owasp-and-security-review.md
+          - "Week 9":
+              - "09.01. Accessibility and inclusive design": web-programming-1/en/09-01-accessibility-and-inclusive-design.md
+              - "09.02. Semantics, keyboard, and screen reader": web-programming-1/en/09-02-semantics-keyboard-and-screen-readers.md
+              - "09.03. Responsive and device-independent design": web-programming-1/en/09-03-responsive-and-device-independent-design.md
+              - "09.04. User-perceived performance": web-programming-1/en/09-04-user-perceived-performance.md
+              - "09.05. Searchability and content quality": web-programming-1/en/09-05-searchability-and-content-quality.md
+              - "09.06. Privacy, tracking, and digital ethics": web-programming-1/en/09-06-privacy-tracking-and-digital-ethics.md
+          - "Week 10":
+              - "10.01. Quality of service and availability": web-programming-1/en/10-01-service-quality-and-availability.md
+              - "10.02. Error handling and user communication": web-programming-1/en/10-02-errors-and-user-communication.md
+              - "10.03. Response time, loading, and resource needs": web-programming-1/en/10-03-response-time-load-and-resources.md
+              - "10.04. HTTP cache and CDN": web-programming-1/en/10-04-http-cache-and-cdn.md
+              - "10.05. Load peaks and observability": web-programming-1/en/10-05-load-peaks-and-observability.md
+              - "10.06. Performance, security, and cost": web-programming-1/en/10-06-performance-security-and-cost.md
