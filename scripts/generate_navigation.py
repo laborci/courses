@@ -29,7 +29,7 @@ lines = [
     "use_directory_urls: true",
     "theme:",
     "  name: material",
-    "  language: hu",
+    "  language: en",
     "  font: false",
     "  features:",
     "    - navigation.tabs",
@@ -56,7 +56,7 @@ lines = [
     "          class: mermaid",
     "          format: !!python/name:pymdownx.superfences.fence_code_format",
     "nav:",
-    "  - Kezdőlap: index.md",
+    "  - Home: index.md",
 ]
 
 courses = sorted(
@@ -64,7 +64,7 @@ courses = sorted(
     if p.is_dir() and any((p / language).is_dir() for language in ("hu", "en"))
 )
 for language_name, language_label, home_label, syllabus_label, week_label in [
-    ("hu", "Magyar", "Kezdőlap", "Kurzusáttekintő", "hét"),
+    ("hu", "Magyar", "Home", "Syllabus", "Week"),
     ("en", "English", "Home", "Syllabus", "Week"),
 ]:
     language_home = DOCS / language_name / "index.md"
@@ -95,7 +95,7 @@ for language_name, language_label, home_label, syllabus_label, week_label in [
                 raise ValueError(f"Instructor presentation must not be published: {chapter}")
             weeks.setdefault(chapter.name[:2], []).append(chapter)
         for week, files in weeks.items():
-            group = f"{week}. {week_label}" if language_name == "hu" else f"{week_label} {int(week)}"
+            group = f"{week_label} {int(week)}"
             lines += [f"          - {quoted(group)}:"]
             for chapter in files:
                 label = short_titles.get(chapter.name, heading(chapter))

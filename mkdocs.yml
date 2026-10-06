@@ -5,7 +5,7 @@ repo_url: https://github.com/laborci/courses
 use_directory_urls: true
 theme:
   name: material
-  language: hu
+  language: en
   font: false
   features:
     - navigation.tabs
@@ -32,47 +32,47 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
-  - Kezdőlap: index.md
+  - Home: index.md
   - "Magyar":
-      - "Kezdőlap": hu/index.md
+      - "Home": hu/index.md
       - "Webprogramozás I (2026)":
-          - "Kezdőlap": web-programming-1/hu/index.md
-          - "Kurzusáttekintő": web-programming-1/hu/00-syllabus.md
-          - "01. hét":
+          - "Home": web-programming-1/hu/index.md
+          - "Syllabus": web-programming-1/hu/00-syllabus.md
+          - "Week 1":
               - "01.01. A web mint általános platform": web-programming-1/hu/01-01-web-as-a-platform.md
               - "01.02. A web fejlődése": web-programming-1/hu/01-02-web-evolution.md
               - "01.03. A web fő szereplői": web-programming-1/hu/01-03-web-actors.md
               - "01.04. Kliens–szerver modell és rétegek": web-programming-1/hu/01-04-client-server-and-multitier.md
               - "01.05. Webszabványok és interoperabilitás": web-programming-1/hu/01-05-web-standards-and-interoperability.md
-          - "02. hét":
+          - "Week 2":
               - "02.01. Webcímek és erőforrások": web-programming-1/hu/02-01-web-addresses-and-resources.md
               - "02.02. A HTTP-kérés és -válasz": web-programming-1/hu/02-02-http-request-and-response.md
               - "02.03. HTTP-metódusok": web-programming-1/hu/02-03-http-methods.md
               - "02.04. HTTP-státuszkódok": web-programming-1/hu/02-04-http-status-codes.md
               - "02.05. Fejlécek, törzs és tartalomtípusok": web-programming-1/hu/02-05-headers-body-and-content-types.md
               - "02.06. Egy kérés megfigyelése": web-programming-1/hu/02-06-reading-network-panel.md
-          - "03. hét":
+          - "Week 3":
               - "03.01. HTML, CSS és JavaScript": web-programming-1/hu/03-01-html-css-and-javascript.md
               - "03.02. Dokumentumszerkezet, DOM és szemantika": web-programming-1/hu/03-02-document-structure-and-dom.md
               - "03.03. Böngészős renderelés": web-programming-1/hu/03-03-browser-rendering.md
               - "03.04. Webes erőforrások betöltése": web-programming-1/hu/03-04-loading-web-resources.md
               - "03.05. Böngészőkompatibilitás": web-programming-1/hu/03-05-browser-compatibility.md
               - "03.06. A böngésző képességei": web-programming-1/hu/03-06-browser-capabilities.md
-          - "04. hét":
+          - "Week 4":
               - "04.01. Domainnév, IP-cím és DNS": web-programming-1/hu/04-01-dns-and-ip-addresses.md
               - "04.02. Kapcsolatfelépítés, TCP és TLS": web-programming-1/hu/04-02-connection-tcp-and-tls.md
               - "04.03. A HTTPS védelme és határai": web-programming-1/hu/04-03-https-protection-and-limits.md
               - "04.04. Proxyk, reverse proxyk és CDN-ek": web-programming-1/hu/04-04-proxies-and-cdns.md
               - "04.05. Egy webes kérés teljes útja": web-programming-1/hu/04-05-complete-web-request.md
               - "04.06. Késleltetés és hibák": web-programming-1/hu/04-06-latency-and-failures.md
-          - "05. hét":
+          - "Week 5":
               - "05.01. Mi a webes API?": web-programming-1/hu/05-01-what-is-a-web-api.md
               - "05.02. JSON, XML és strukturált adatok": web-programming-1/hu/05-02-json-xml-and-data.md
               - "05.03. REST és HTTP-erőforrások": web-programming-1/hu/05-03-rest-and-http-resources.md
               - "05.04. GraphQL és RPC": web-programming-1/hu/05-04-graphql-and-rpc.md
               - "05.05. Változó adatok és események": web-programming-1/hu/05-05-changing-data-and-events.md
               - "05.06. Verziózás és dokumentáció": web-programming-1/hu/05-06-api-evolution-and-documentation.md
-          - "06. hét":
+          - "Week 6":
               - "06.01. Többoldalas és egyoldalas alkalmazások": web-programming-1/hu/06-01-multi-page-and-single-page-apps.md
               - "06.02. Kliensoldali renderelés": web-programming-1/hu/06-02-client-side-rendering.md
               - "06.03. Szerveroldali renderelés": web-programming-1/hu/06-03-server-side-rendering.md
@@ -80,28 +80,28 @@ nav:
               - "06.05. Navigáció és kliensoldali állapot": web-programming-1/hu/06-05-navigation-and-client-state.md
               - "06.06. Service worker és offline működés": web-programming-1/hu/06-06-service-workers-and-offline.md
               - "06.07. Architektúraválasztás": web-programming-1/hu/06-07-choosing-an-application-architecture.md
-          - "07. hét":
+          - "Week 7":
               - "07.01. Állapotmentes HTTP és alkalmazási állapot": web-programming-1/hu/07-01-stateless-http-and-application-state.md
               - "07.02. Cookie-k és munkamenetek": web-programming-1/hu/07-02-cookies-and-sessions.md
               - "07.03. Böngészős tárolás és tokenek": web-programming-1/hu/07-03-browser-storage-and-tokens.md
               - "07.04. Hitelesítés és jogosultság": web-programming-1/hu/07-04-authentication-and-authorization.md
               - "07.05. OAuth 2.0 és OpenID Connect": web-programming-1/hu/07-05-oauth-and-openid-connect.md
               - "07.06. Egyszeri és külső bejelentkezés": web-programming-1/hu/07-06-sso-and-external-login.md
-          - "08. hét":
+          - "Week 8":
               - "08.01. Fenyegetési modell és bizalmi határok": web-programming-1/hu/08-01-threat-models-and-trust-boundaries.md
               - "08.02. Same-origin policy és CORS": web-programming-1/hu/08-02-same-origin-policy-and-cors.md
               - "08.03. XSS, CSRF és injekció": web-programming-1/hu/08-03-xss-csrf-and-injection.md
               - "08.04. Jelszavak, MFA és munkamenetek": web-programming-1/hu/08-04-passwords-mfa-and-sessions.md
               - "08.05. A HTTPS szerepe és korlátai": web-programming-1/hu/08-05-https-and-its-limits.md
               - "08.06. OWASP és biztonsági áttekintés": web-programming-1/hu/08-06-owasp-and-security-review.md
-          - "09. hét":
+          - "Week 9":
               - "09.01. Akadálymentesség és inkluzív tervezés": web-programming-1/hu/09-01-accessibility-and-inclusive-design.md
               - "09.02. Szemantika, billentyűzet és képernyőolvasó": web-programming-1/hu/09-02-semantics-keyboard-and-screen-readers.md
               - "09.03. Reszponzív és eszközfüggetlen megjelenés": web-programming-1/hu/09-03-responsive-and-device-independent-design.md
               - "09.04. Felhasználói szempontú teljesítmény": web-programming-1/hu/09-04-user-perceived-performance.md
               - "09.05. Kereshetőség és tartalmi minőség": web-programming-1/hu/09-05-searchability-and-content-quality.md
               - "09.06. Adatvédelem, követés és digitális etika": web-programming-1/hu/09-06-privacy-tracking-and-digital-ethics.md
-          - "10. hét":
+          - "Week 10":
               - "10.01. Szolgáltatásminőség és rendelkezésre állás": web-programming-1/hu/10-01-service-quality-and-availability.md
               - "10.02. Hibakezelés és felhasználói kommunikáció": web-programming-1/hu/10-02-errors-and-user-communication.md
               - "10.03. Válaszidő, betöltés és erőforrásigény": web-programming-1/hu/10-03-response-time-load-and-resources.md
