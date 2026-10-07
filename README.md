@@ -1,3 +1,21 @@
+# Course portal
+
+The published teaching portal is available at https://laborci.github.io/courses/.
+
+The SvelteKit portal and Markdown materials are in `portal/`. The legacy MkDocs source remains in `docs/`.
+
+```sh
+cd portal
+bun install --frozen-lockfile
+bun run check
+bun test
+BASE_PATH=/courses bun run build
+```
+
+The GitHub Pages workflow builds and publishes `portal/build` on pushes to `main`.
+
+---
+
 # Courses
 
 Hallgatóknak szóló, nyilvános tananyagok egyetlen kereshető weboldalon.
