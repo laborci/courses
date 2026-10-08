@@ -21,7 +21,7 @@ export function loadPortalPage(slug = '') {
     articleHtml: page.html,
     breadcrumb: breadcrumbPath(tree, page.inTree ? page.slug : course?.slug || ''),
     treePaths: Object.fromEntries(tree.map(item => [item.slug, breadcrumbPath(tree, item.slug)])),
-    ...readingOrder(graph.pages, page)
+    ...readingOrder(graph.pages, page, tree)
   };
 }
 export type PortalPageData = ReturnType<typeof loadPortalPage>;

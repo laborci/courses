@@ -18,7 +18,7 @@ import config from '../portal.config';
 import { parse as parseYaml } from 'yaml';
 import { remarkCallouts, rehypeCalloutIcons } from './callouts';
 
-export type NavItem = { slug: string; title: string; parent: string | null };
+export type NavItem = { slug: string; title: string; parent: string | null; chapter?: string | number };
 export type ContentPage = NavItem & {
   course: string | null; html: string; text: string; inTree: boolean;
   previous: string | null; next: string | null;
@@ -26,9 +26,13 @@ export type ContentPage = NavItem & {
   headings: { id: string; title: string; depth: number }[];
 };
 export type Course = {
-  slug: string; name: string; instructor: string | null; year: string | number | null;
-  language: string; tags: string[]; intro: string; image: string | null;
+  slug: string; name: string; author: string | null;
+  language: string; tags: string[]; contentTags: string[]; intro: string; image: string | null;
 };
+export function normalizeTag(tag: string): string {
+  return tag.trim().toLocaleLowerCase('hu').normalize('NFD').replace(/\p{M}/gu, '').replace(/\s+/gu, ' ');
+}
+
 export type ContentGraph = { pages: ContentPage[]; navigation: NavItem[]; courses: Course[] };
 const parser = unified().use(remarkParse).use(remarkGfm).use(remarkMath);
 const external = /^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i;
@@ -126,7 +130,7 @@ export async function buildGraph(contentRoot: string, entrypoint: string, base =
   async function document(file: string) {
     let body = await readFile(file, 'utf8');
     let metadata: Record<string, unknown> = {};
-    const frontmatter = body.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
+    const frontmatter = body.match(/^\uFEFF?---\r?\n((?:[^\n]*\n)*?)---(?:\r?\n|$)/);
     if (frontmatter) {
       const parsed = parseYaml(frontmatter[1]);
       if (parsed !== null && (typeof parsed !== 'object' || Array.isArray(parsed))) throw new Error(`Invalid frontmatter in ${file}`);
@@ -257,11 +261,10 @@ export async function buildGraph(contentRoot: string, entrypoint: string, base =
     name ||= slug.split('/').at(-1)!;
     const tags = metadata.tags ?? [];
     if (!Array.isArray(tags) || tags.some(tag => typeof tag !== 'string' || !tag.trim())) throw new Error(`Invalid tags in ${file}`);
-    const year = metadata.year ?? null;
-    if (year !== null && typeof year !== 'string' && typeof year !== 'number') throw new Error(`Invalid year in ${file}`);
+    if ('instructor' in metadata || 'year' in metadata) throw new Error(`Obsolete course metadata in ${file}: use author instead of instructor and remove year`);
     const image = text('image');
     const imageUrl = image ? await asset(await target(file, image)) : null;
-    graph.courses.push({ slug, name, instructor: text('instructor') || null, year, language: text('language', true), tags: [...new Set(tags.map(tag => tag.trim()))], intro: text('intro'), image: imageUrl });
+    graph.courses.push({ slug, name, author: text('author') || null, language: text('language', true), tags: [...new Set(tags.map(tag => tag.trim()))], contentTags: [], intro: text('intro'), image: imageUrl });
     titles.set(slug, name);
   }
   const processedChildren = new Set<string>();
@@ -291,11 +294,13 @@ export async function buildGraph(contentRoot: string, entrypoint: string, base =
       const usedIds = new Set<string>();
       let html = '';
       let author: string | null = null;
+      let chapter: NavItem['chapter'];
       let tags: string[] = [];
       async function append(file: string, ancestors: string[]) {
         if (ancestors.includes(file)) throw new Error(`Circular sources: ${[...ancestors, file].join(' -> ')}`);
         const { tree, sources, children, metadata } = await document(file);
         if (!ancestors.length) {
+          chapter = typeof metadata.chapter === 'string' || typeof metadata.chapter === 'number' ? metadata.chapter : undefined;
           if (metadata.author !== undefined && typeof metadata.author !== 'string') throw new Error(`Invalid author in ${file}`);
           author = typeof metadata.author === 'string' ? metadata.author.trim() || null : null;
           const pageTags = metadata.tags ?? [];
@@ -341,8 +346,8 @@ export async function buildGraph(contentRoot: string, entrypoint: string, base =
       title ||= slug.split('/').at(-1) || config.title;
       const parent = parents.get(slug) ?? null;
       const inTree = parents.has(slug);
-      graph.pages.push({ course: owner(files.get(slug)!), slug, title, parent, inTree, author, tags, html, text: texts.join('\n'), headings, previous: siblings.get(slug)?.previous ?? null, next: siblings.get(slug)?.next ?? null });
-      if (inTree) graph.navigation.push({ slug, title, parent });
+      graph.pages.push({ course: owner(files.get(slug)!), slug, title, parent, ...(chapter !== undefined ? { chapter } : {}), inTree, author, tags, html, text: texts.join('\n'), headings, previous: siblings.get(slug)?.previous ?? null, next: siblings.get(slug)?.next ?? null });
+      if (inTree) graph.navigation.push({ slug, title, parent, ...(chapter !== undefined ? { chapter } : {}) });
     }
 
   // Reject hierarchy cycles even when a branch is reached through an ordinary link.
@@ -380,11 +385,23 @@ export async function buildGraph(contentRoot: string, entrypoint: string, base =
     page.inTree = parents.has(page.slug);
     page.course = owner(files.get(page.slug)!);
   }
+  for (const course of graph.courses) {
+    const seen = new Set(course.tags.map(normalizeTag));
+    for (const page of graph.pages) {
+      if (page.course !== course.slug) continue;
+      for (const tag of page.tags) {
+        const key = normalizeTag(tag);
+        if (seen.has(key)) continue;
+        seen.add(key);
+        course.contentTags.push(tag);
+      }
+    }
+  }
   const pagesBySlug = new Map(graph.pages.map(page => [page.slug, page]));
   graph.navigation = [];
   function navigationBranch(slug: string) {
     const page = pagesBySlug.get(slug)!;
-    graph.navigation.push({ slug, title: page.title, parent: page.parent });
+    graph.navigation.push({ slug, title: page.title, parent: page.parent, ...(page.chapter !== undefined ? { chapter: page.chapter } : {}) });
     const declaredChildren = [...membership].filter(([, rootSlug]) => rootSlug === slug).map(([member]) => member);
     const children = [...parents].filter(([child, parent]) => parent === slug && !declaredChildren.includes(child)).map(([child]) => child);
     for (const child of [...children, ...declaredChildren]) navigationBranch(child);
