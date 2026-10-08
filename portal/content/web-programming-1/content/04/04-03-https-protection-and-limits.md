@@ -43,11 +43,3 @@ Ha a tanúsítvány nem érvényes a megnyitott domainre vagy más ellenőrzés 
 | „A titkosítás minden hálózati adatot elrejt.” | A kapcsolat egyes metaadatai továbbra is láthatók lehetnek. |
 | „A tanúsítvány a tartalom igazságát garantálja.” | A domainhez kötött kapcsolat ellenőrzésében segít. |
 | „A tanúsítványhiba HTTP 404.” | A tanúsítvány ellenőrzése a HTTP-válasz előtt is megállíthatja a folyamatot. |
-
-## Megismert fogalmak
-
-- **HTTPS:** A HTTP TLS által védett használata, amely a kommunikáció bizalmasságát, sértetlenségét és a szerver hitelesítését szolgálja.
-- **Titkosság:** Az átvitt tartalom illetéktelen olvasása elleni védelmi tulajdonság.
-- **Sértetlenség:** Az üzenet észrevétlen módosítása elleni védelmi tulajdonság.
-- **Szerver hitelesítése:** Annak ellenőrzése, hogy a kapcsolat a megnevezett szolgáltatás megfelelő végpontjával jött létre.
-- **Vegyes tartalom:** HTTPS-en megnyitott oldalhoz nem védett HTTP-n kért alerőforrás esete.

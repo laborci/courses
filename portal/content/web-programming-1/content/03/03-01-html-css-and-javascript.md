@@ -65,11 +65,3 @@ Ez nem jelenti azt, hogy minden alkalmazás JavaScript nélkül is teljes egész
 | „A CSS csak díszítés.” | Az olvashatóságot és az alkalmazkodó elrendezést is meghatározza. |
 | „Minden modern oldalnak sok JavaScript kell.” | A szükséges viselkedés mértékét a feladat határozza meg. |
 | „A kliensoldali ellenőrzés elég a szabályok védelméhez.” | A fontos alkalmazási szabályokat a szervernek is ellenőriznie kell. |
-
-## Megismert fogalmak
-
-- **HTML:** A webes dokumentum szerkezetét és elemeinek jelentését jelölő leíró nyelv. A böngésző ebből építi fel a dokumentum feldolgozható modelljét.
-- **CSS:** A dokumentum megjelenését meghatározó szabályrendszer. A színek mellett az elrendezést, méretezést és különböző környezetekhez való alkalmazkodást is kezeli.
-- **JavaScript:** Programozási nyelv, amellyel a böngészőben futó viselkedés megvalósítható. Felhasználói eseményekre reagálhat és módosíthatja a dokumentumot.
-- **Szemantika:** Egy dokumentumelem jelentése és szerepe. A helyes szemantika a gépi feldolgozást és a hozzáférhetőséget is segítheti.
-- **Fokozatos fejlesztés:** Olyan tervezési megközelítés, amely használható alapra építi a fejlettebb megjelenést és interakciót. A többletfunkció kiesése így kevésbé veszélyezteti az alapfeladatot.

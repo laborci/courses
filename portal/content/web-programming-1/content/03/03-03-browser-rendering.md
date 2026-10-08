@@ -60,11 +60,3 @@ A Network panel a kérések és válaszok megfigyelésére jó, az Elements/Insp
 | „A HTML-válasz megérkezésekor minden látható.” | További erőforrások és feldolgozási lépések szükségesek lehetnek. |
 | „A DOM minden eleme látható a képernyőn.” | Bizonyos elemek nem vesznek részt a látható elrendezésben. |
 | „A gyors oldal az, amelynek kevés fájlja van.” | A felhasználó számára fontos tartalom és reakció ideje számít. |
-
-## Megismert fogalmak
-
-- **Renderelés:** A dokumentum és stílusok látható megjelenítéssé alakításának folyamata. Több feldolgozási lépésből áll, és későbbi változásokkor ismét részben lefuthat.
-- **CSSOM:** A CSS feldolgozott, programozható stílusmodellje. A böngésző ezt használja a stílusok értelmezésében és alkalmazásában.
-- **Elrendezés:** A látható elemek méretének és képernyőbeli helyének kiszámítása. Változhat új tartalom, stílus vagy erőforrás érkezésekor.
-- **Kirajzolás:** A kiszámított vizuális elemek képpontokká alakítása. A böngésző ezzel készíti el a felhasználó által látott képet.
-- **Elrendezésváltozás:** A látható elemek helyének váratlan vagy későbbi megváltozása. Például egy méret nélküli kép betöltése eltolhatja a környező szöveget.

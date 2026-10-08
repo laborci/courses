@@ -48,12 +48,3 @@ A DNS önmagában nem a webes tartalom hitelesítése. Egy hamis vagy hibás DNS
 | „Egy domainhez egyetlen, állandó IP-cím tartozik.” | Több cím és változó válasz is lehetséges. |
 | „A sikeres DNS-válasz azt jelenti, hogy az oldal működik.” | A kapcsolat és a HTTP-kérés később is hibázhat. |
 | „Minden megnyitáskor újra végig kell járni a teljes DNS-hierarchiát.” | Érvényes gyorsítótári válasz több lépést kiválthat. |
-
-## Megismert fogalmak
-
-- **Domainnév:** Hierarchikus névtérben szereplő, ember számára kezelhető azonosító. A webes hosztnév része lehet.
-- **IP-cím:** Hálózati cím, amelyet az IP-alapú kommunikáció a végpontok eléréséhez használ. Formátuma lehet IPv4 vagy IPv6.
-- **DNS:** Elosztott névrendszer, amely a domainnevekhez többek között hálózati címeket rendel.
-- **Rekurzív feloldó:** A kliens DNS-kérdését feldolgozó szolgáltatás, amely szükség esetén további névszerverektől kérdez.
-- **Autoritív névszerver:** Egy DNS-zóna hiteles rekordjait szolgáltató névszerver.
-- **TTL:** A DNS-válasz megengedett gyorsítótárazási idejét jelző érték.

@@ -17,6 +17,7 @@ children:
   - "[[content/08/08-00-overview.md]]"
   - "[[content/09/09-00-overview.md]]"
   - "[[content/10/10-00-overview.md]]"
+  - "[[resources/assessment]]"
 sources:
   - "[[content/01/01-00-overview.md]]"
   - "[[content/02/02-00-overview.md]]"

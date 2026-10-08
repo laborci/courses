@@ -51,11 +51,3 @@ Egy HTTP-válasz érkezhet az alkalmazástól, egy reverse proxy gyorsítótár�
 | „CDN esetén a válasz mindig gyorsítótárból jön.” | Cache-hiány vagy nem tárolható tartalom esetén az eredeti rendszerhez kell fordulni. |
 | „Egy domain mögött egy szerver van.” | Közvetítők és több alkalmazáspéldány is állhat mögötte. |
 | „A reverse proxy kijavítja az alkalmazás hibáját.” | Csak a saját közvetítési és üzemeltetési feladatait látja el. |
-
-## Megismert fogalmak
-
-- **Proxy:** Kliensoldali közvetítő, amely egy kliens vagy klienscsoport nevében kommunikálhat más szolgáltatásokkal.
-- **Reverse proxy:** Szolgáltatói belépési pont, amely fogadja és a belső rendszer felé irányítja a kéréseket.
-- **CDN:** Földrajzilag elosztott tartalomkézbesítő hálózat, amely bizonyos erőforrásokat a felhasználóhoz közelebbi ponton szolgálhat ki.
-- **Cache-találat:** Olyan kérés, amelyre a gyorsítótárban már rendelkezésre áll megfelelően használható válasz.
-- **Eredeti szerver:** A tartalom elsődleges forrása a kézbesítő vagy gyorsítótárazó rétegek mögött.

@@ -72,11 +72,3 @@ Ha egy szolgáltatás csak egyetlen böngészőben használható, annak oka lehe
 | „A szabvány megakadályozza az innovációt.” | A közös alapokra építve könnyebb új, széles körben használható megoldásokat létrehozni. |
 | „Ha egy funkció működik Chrome-ban, akkor mindenhol működik.” | A böngészők támogatása és hibái eltérhetnek. |
 | „A W3C egy hatóság, amely kötelező törvényeket hoz.” | A W3C ajánlásokat és szabványokat dolgoz ki; a jogi kötelezettség más forrásból eredhet. |
-
-## Megismert fogalmak
-
-- **Szabvány:** Közösen elfogadott technikai szabályrendszer. Meghatározza, milyen viselkedést várhatnak a rendszerek egymástól.
-- **Specifikáció:** Egy technológia működésének részletes írásos leírása. A megvalósítóknak referencia a kompatibilis működéshez.
-- **Interoperabilitás:** Különböző megvalósítások együttműködési képessége. A weben közös szabványok teszik lehetővé, hogy eltérő böngészők és szerverek kommunikáljanak.
-- **Nyílt szabvány:** Nyilvánosan hozzáférhető és több szereplő által megvalósítható műszaki szabályrendszer. Segíti az ellenőrizhetőséget és csökkentheti az egyetlen gyártótól való függést.
-- **Vendor lock-in:** Olyan függőség, amelyben egy szolgáltató vagy technológia elhagyása jelentős költséggel vagy adatvesztési kockázattal jár. Egyedi, nem átjárható formátumok és interfészek erősíthetik.

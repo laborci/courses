@@ -74,12 +74,3 @@ Az `500 Internal Server Error` általános belső hibát jelöl. A `503 Service 
 | „A 200 minden szempontból siker.” | A HTTP-szintű eredményt jelzi, nem az üzleti cél teljesülését. |
 | „A 401 és 403 ugyanaz.” | A hitelesítés hiánya és a tiltott művelet külön eset. |
 | „A 3xx mindig hiba.” | Többnyire további lépést vagy gyorsítótári döntést jelez. |
-
-## Megismert fogalmak
-
-- **HTTP-státuszkód:** A szerver válaszában szereplő háromjegyű eredményjelzés. Első számjegye tág kódcsaládot határoz meg.
-- **Sikeres válasz:** A 2xx családba tartozó HTTP-válasz, amely a kérés protokollszintű teljesítését jelzi. Nem garantálja, hogy a felhasználó minden üzleti célja megvalósult.
-- **Átirányítás:** Olyan válasz, amely további kérésre vezethet egy másik cím felé. Az új címet jellemzően a `Location` fejléc adja meg.
-- **Hitelesítés:** Annak ellenőrzése, ki a kérést indító fél. Hiánya vagy hibája gyakran 401-es választ eredményez.
-- **Jogosultság:** Annak meghatározása, hogy egy azonosított fél milyen műveletet végezhet. Tiltás esetén 403-as válasz fordulhat elő.
-- **Szolgáltatási hiba:** Olyan szerveroldali vagy háttérbeli probléma, amely miatt a kérés nem teljesíthető megfelelően. A HTTP-ben jellemzően 5xx kód jelzi.

@@ -46,10 +46,3 @@ Service worker többoldalas és egyoldalas webhelyhez is kapcsolható. Az SPA a 
 | „Az offline alkalmazás minden adata friss.” | A helyi másolat a legutóbbi ismert állapotot tükrözheti. |
 | „Az SPA alapból offline működik.” | Külön tárolási és kéréskezelési terv kell. |
 | „A Cache API és az IndexedDB ugyanaz.” | Az előbbi válaszokat, az utóbbi strukturált adatot kezel más módon. |
-
-## Megismert fogalmak
-
-- **Service worker:** Elkülönülő böngészős háttérprogram, amely a saját hatókörében többek között hálózati kérésekhez kapcsolódó eseményeket kezelhet.
-- **Cache API:** Kérés–válasz párok helyi tárolására szolgáló böngészős felület.
-- **Offline stratégia:** Annak tervezett szabálya, mely erőforrás és művelet használható hálózat nélkül, és hogyan történik a későbbi frissítés.
-- **Hatókör:** Azon oldalak és erőforrások köre, amelyekre egy service worker vezérlése kiterjedhet.

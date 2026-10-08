@@ -7,6 +7,7 @@ children:
   - "[[07-04-authentication-and-authorization.md]]"
   - "[[07-05-oauth-and-openid-connect.md]]"
   - "[[07-06-sso-and-external-login.md]]"
+  - "[[07-00-glossary.md]]"
 ---
 # Állapot, identitás és hozzáférés
 

@@ -6,6 +6,7 @@ children:
   - "[[01-03-web-actors.md]]"
   - "[[01-04-client-server-and-multitier.md]]"
   - "[[01-05-web-standards-and-interoperability.md]]"
+  - "[[01-00-glossary.md]]"
 ---
 # Mi a web?
 

@@ -45,11 +45,3 @@ Egy webhely küldhet cookie-ban szerveroldali munkamenet-azonosítót. Egy API e
 | „Minden token JWT.” | Több formátum, köztük átláthatatlan token is létezik. |
 | „A localStorage adatai automatikusan mennek a szervernek.” | A cookie-val ellentétben nem csatolódnak automatikusan a kérésekhez. |
 | „A böngészőben tárolt sikeres jelentkezés a hivatalos eredmény.” | Az alkalmazás szerveroldali állapota a mérvadó. |
-
-## Megismert fogalmak
-
-- **Web Storage:** A böngésző eredethez kötött, egyszerű kulcs–érték tárolófelületeinek gyűjtőneve.
-- **localStorage:** A böngészőben későbbi használatra is megőrizhető kulcs–érték adatokat kezelő felület.
-- **sessionStorage:** Egy böngészőlap munkamenetéhez kapcsolódó kulcs–érték tárolófelület.
-- **Token:** Meghatározott protokollbeli célra kiadott és ellenőrizhető érték, például erőforráshoz való hozzáférés képviseletére.
-- **Hozzáférési token:** Olyan token, amelyet a kliens egy védett erőforrás eléréséhez adhat át a megfelelő erőforrás-szervernek.

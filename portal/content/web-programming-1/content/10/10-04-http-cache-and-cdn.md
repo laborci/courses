@@ -77,15 +77,3 @@ Az oldal tetején lévő „utolsó frissítés” információ viszont rövid i
 **„A CDN kizárólag nagy cégeknek való.”** Kis oldalak is profitálhatnak a földrajzilag közeli statikus kiszolgálásból és a tehermentesítésből, de az igény és a költség dönt.
 
 **„A CDN minden weboldalt felgyorsít.”** A személyre szabott, adatbázis-igényes válasz lassúságát a CDN nem feltétlenül oldja meg. Előbb tudni kell, hol keletkezik a késés.
-
-## Megismert fogalmak
-
-- **Cache / gyorsítótár:** korábbi válasz vagy számítás eredményének ideiglenes tárolása újrafelhasználás céljára.
-- **Cache hit:** a kért tartalom megtalálható a gyorsítótárban és felhasználható.
-- **Cache miss:** nincs használható másolat, ezért az eredeti forráshoz kell fordulni.
-- **Origin:** az a kiinduló kiszolgáló vagy alkalmazás, amely az eredeti tartalomért felel.
-- **CDN:** földrajzilag elosztott hálózat, amely a felhasználóhoz közeli pontokról szolgál ki tartalmat.
-- **Edge:** CDN-csomópont a felhasználóhoz közel.
-- **Frissesség:** az az időszak, amikor a tárolt válasz ellenőrzés nélkül felhasználható.
-- **Érvénytelenítés:** korábbi cache-bejegyzés célzott eltávolítása vagy használatának megtiltása.
-- **ETag:** egy válaszváltozat azonosítója, amely támogatja a feltételes újraellenőrzést.

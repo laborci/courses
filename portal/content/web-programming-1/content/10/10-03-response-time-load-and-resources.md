@@ -74,13 +74,3 @@ Vizsgálatkor kiderülhet, hogy a termékfotók túl nagyok, több külső mér�
 **„Minél több tartalom van egyszerre az oldalon, annál jobb.”** A korai hasznosságot és a reakciót gyakran éppen a felesleges kezdeti terhelés rontja.
 
 **„Az átlag válaszidő jól leírja a minőséget.”** Az átlag elrejtheti a lassú, de valós felhasználói eseteket.
-
-## Megismert fogalmak
-
-- **Válaszidő:** a kérés indításától a válasz megérkezéséig eltelt idő.
-- **Késleltetés:** az adat továbbításából és feldolgozásából eredő időbeli késés.
-- **Betöltési idő:** a weboldal megjelenésének és használhatóságának fokozatos folyamata.
-- **Interakciós késés:** a felhasználói művelet és az érzékelhető reakció közötti idő.
-- **Backend-mérés:** szerveroldali működést leíró mérés.
-- **UX-mérés:** a felhasználó böngészőben tapasztalt élményéhez közeli mérés.
-- **Percentilis:** az eloszlást leíró érték; például a 95. percentilis alatt van a mérések 95%-a.

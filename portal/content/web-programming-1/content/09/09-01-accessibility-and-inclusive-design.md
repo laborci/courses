@@ -76,17 +76,3 @@ Különösen fontos, hogy az akadálymentesség ne egyetlen ellenőrzési nap le
 **„Az ARIA megoldja a problémákat.”** Az ARIA kiegészítheti a szemantikát, de rosszul használva félrevezeti a segítő technológiát. Első választás a megfelelő natív HTML-elem.
 
 **„A hozzáférhetőség korlátozza a kreativitást.”** Inkább keretet ad: a látvány akkor jó, ha közben világos, kezelhető és stabil marad.
-
-## Megismert fogalmak
-
-**Akadálymentesség (accessibility):** annak biztosítása, hogy eltérő képességekkel és segítő technológiákkal is használható legyen a tartalom.
-
-**Inkluzív tervezés:** olyan tervezési szemlélet, amely már a kezdetektől számol a felhasználók sokféleségével.
-
-**WCAG:** a webtartalom akadálymentességére vonatkozó irányelvek rendszere.
-
-**Kontrasztarány:** a két szín fényességkülönbségének mérőszáma; az olvashatóság egyik fontos tényezője.
-
-**Alternatív szöveg (`alt`):** a kép szerepét közvetítő szöveges helyettesítés.
-
-**Segítő technológia:** például képernyőolvasó, nagyító vagy alternatív beviteli eszköz.

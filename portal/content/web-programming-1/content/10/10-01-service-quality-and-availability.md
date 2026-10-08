@@ -64,13 +64,3 @@ Jó SLI lehet a „sikeresen befejezett tárgyfelvételek aránya”. Ehhez SLO-
 **„A magas rendelkezésre állás egyenlő a jó felhasználói élménnyel.”** Egy lassú, zavaros vagy akadálymentesítés nélküli szolgáltatás technikailag elérhető lehet, mégis kudarcot vall a céljánál.
 
 **„Az SLA technikai mérőszám.”** Az SLA szerződéses vállalás; tartalmazhat mérőszámot, de nem azonos sem a méréssel, sem a belső céllal.
-
-## Megismert fogalmak
-
-- **Rendelkezésre állás:** annak aránya, hogy a szolgáltatás rendeltetésszerűen használható.
-- **Megbízhatóság:** a helyes működés kiszámíthatósága időben.
-- **Reziliens rendszer:** hiba esetén is igyekszik a fontos funkciókat fenntartani vagy korlátozottan biztosítani.
-- **SLI:** mért szolgáltatási mutató.
-- **SLO:** belső célérték egy SLI-re.
-- **SLA:** külső fél felé tett szerződéses szolgáltatási vállalás.
-- **Kritikus felhasználói út:** a felhasználó céljához szükséges, kiemelten fontos lépéssor.

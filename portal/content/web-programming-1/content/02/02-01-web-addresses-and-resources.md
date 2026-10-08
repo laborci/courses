@@ -56,14 +56,3 @@ Az URI tágabb azonosítófogalom, az URL ennek a weben gyakran használt, elér
 | „Az útvonal biztosan egy mappa a szerveren.” | Az alkalmazás tetszőleges logikai erőforrásként értelmezheti. |
 | „A fragmentum titkos, mert nem jut el a szerverhez.” | A címben továbbra is látható és megosztható. |
 | „A port csak helyi fejlesztéskor létezik.” | A hálózati kapcsolatnak éles szolgáltatásnál is van portja. |
-
-## Megismert fogalmak
-
-- **Erőforrás:** Weben azonosítható tartalom vagy alkalmazási célpont. Lehet dokumentum, kép, strukturált adat vagy egy művelethez kapcsolódó cím.
-- **URL:** Erőforrás elérését leíró cím. Tartalmazhat sémát, hosztnevet, portot, útvonalat, lekérdezési részt és fragmentumot.
-- **Séma:** Az URL elején álló jelölés, amely az elérés módját határozza meg. A webes példákban gyakori a `http` és a `https`.
-- **Hosztnév:** A szolgáltatás név szerinti azonosítója az URL-ben. Nem azonos egy fizikai szerverrel vagy egy IP-címmel.
-- **Port:** Számozott hálózati végpont egy szolgáltatás eléréséhez. Az alapértelmezett port az URL-ben gyakran nincs külön feltüntetve.
-- **Útvonal:** A szolgáltatáson belüli erőforrást megjelölő URL-rész. Értelmezése az alkalmazástól függ.
-- **Lekérdezési rész:** A `?` után álló, gyakran név–érték párokból álló URL-rész. További információt adhat a kiválasztáshoz vagy szűréshez.
-- **Fragmentum:** A `#` utáni URL-rész, amelyet webes navigációban rendszerint a böngésző kezel. Jellemzően nem kerül a HTTP-kérés céljába.

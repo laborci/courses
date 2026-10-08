@@ -38,7 +38,7 @@
 </svelte:head>
 
 <a class="fixed -top-20 left-5 z-[100] bg-canvas p-3 focus:top-2.5" href="#main">Skip to content</a>
-<DocumentHeader course={data.course} {columns}/>
+<DocumentHeader branding={data.branding} course={data.course} {columns}/>
 
 <div class={data.page.slug === '' ? 'mx-auto min-h-[calc(100dvh-64px)] max-w-[2040px] min-[900px]:min-h-[calc(100dvh-76px)]' : `mx-auto ${data.course ? 'min-h-[calc(100dvh-120px)]' : 'min-h-[calc(100dvh-64px)]'} max-w-[2040px] min-[900px]:min-h-[calc(100dvh-76px)] min-[900px]:grid ${data.course ? columns : 'min-[1280px]:grid-cols-[minmax(0,1fr)_clamp(220px,16vw,320px)]'}`}>
 

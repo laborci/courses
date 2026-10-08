@@ -50,10 +50,3 @@ Egy kliensoldali nézetváltás ne csak vizuálisan történjen meg. A felhaszn�
 | „A kliensoldali állapot azonos a szerver hivatalos adatával.” | A kliens pillanatnyi másolatot vagy felületi állapotot is kezelhet. |
 | „A History API automatikusan kirajzolja az oldalt.” | Az alkalmazásnak kell az URL-hez tartozó nézetet felépítenie. |
 | „Minden állapotot IndexedDB-be kell menteni.” | Az állapot megőrzési és megosztási igénye eltérő. |
-
-## Megismert fogalmak
-
-- **Kliensoldali állapot:** A böngészőben kezelt pillanatnyi adat, amely meghatározhatja a megjelenő nézetet és interakciót.
-- **Szerveroldali állapot:** A szolgáltatás által kezelt, több kérés vagy felhasználó számára jelentős alkalmazási adat.
-- **Navigációs állapot:** Az a rész, amely meghatározza, melyik nézet és URL aktuális a böngészőben.
-- **History API:** Böngészőfelület a munkamenet előzményeinek programozott kezelésére, például kliensoldali navigáció támogatására.

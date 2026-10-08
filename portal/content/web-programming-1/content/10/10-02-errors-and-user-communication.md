@@ -65,12 +65,3 @@ A felelős válasz az állapot tisztázására épít: a rendszer azonosítja a 
 **„A status page csak nagy cégeknek kell.”** Nem minden rendszernek indokolt, de bármely sok felhasználót érintő, kritikus szolgáltatásnál értékes bizalmi eszköz lehet.
 
 **„Az újrapróbálkozás ártalmatlan.”** Bizonyos műveleteknél, például fizetésnél vagy foglalásnál ismételt végrehajtást okozhat.
-
-## Megismert fogalmak
-
-- **Hibakezelés:** a rendellenes helyzet felismerése, biztonságos kezelése és kommunikációja.
-- **HTTP-státuszkód:** a válasz feldolgozási eredményét jelző szabványos számkód.
-- **Időtúllépés:** a várt válasz egy meghatározott időn belül nem érkezik meg.
-- **Újrapróbálkozás:** egy sikertelennek látszó művelet ismételt kezdeményezése.
-- **Status page:** szolgáltatásállapotot és üzemzavarokat közlő tájékoztató oldal.
-- **Részleges kiesés:** amikor csak a szolgáltatás egyes funkciói nem működnek.

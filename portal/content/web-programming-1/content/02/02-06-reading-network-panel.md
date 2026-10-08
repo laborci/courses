@@ -61,11 +61,3 @@ A panelben érzékeny információ is előfordulhat, például munkamenethez kap
 | „A Network panel megmutatja a szerver teljes belső működését.” | A böngésző felől látható kommunikációt mutatja. |
 | „A 200-as státusz bizonyítja, hogy az egész oldal hibátlan.” | Csak az adott kérés HTTP-szintű sikerét jelzi. |
 | „Minden fejléc biztonságosan megosztható.” | Egyes fejlécek érzékeny adatot tartalmazhatnak. |
-
-## Megismert fogalmak
-
-- **Network panel:** A böngésző fejlesztői eszközeinek hálózati nézete. A böngésző által indított kérések és a kapott válaszok megfigyelését támogatja.
-- **Hálózati kérés sora:** Egy kéréshez tartozó bejegyzés a panel listájában. Azonosítható rajta a cél, a metódus, a státusz és több kapcsolódó adat.
-- **Kérésrészlet:** A kiválasztott bejegyzéshez tartozó URL, metódus, fejlécek és esetleges törzs. A kliens által küldött üzenet megértését segíti.
-- **Válaszrészlet:** A szervertől kapott státusz, fejlécek és esetleges törzs. A szerver által visszaadott eredmény megfigyelését segíti.
-- **Átirányítási lánc:** Egymást követő kérések sorozata, amikor egy 3xx válasz új címre vezeti a klienst. Nem azonos a dokumentum további erőforrásainak lekérésével.

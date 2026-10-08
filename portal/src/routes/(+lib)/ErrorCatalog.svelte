@@ -6,6 +6,7 @@
   const data = $derived({
     page: { ...catalog.page, title: status === 404 ? 'Page not found' : 'Something went wrong' },
     course: null,
+    branding: catalog.branding || '',
     courseTree: [],
     courses: catalog.courses,
     titleHeading: null,

@@ -44,9 +44,3 @@ Többoldalas alkalmazásnál minden navigáció kaphat új, szerveroldalon elő�
 | „SSR oldalon nincs JavaScript.” | Később interaktív program is kapcsolódhat a HTML-hez. |
 | „A látható HTML minden gombot azonnal működőképessé tesz.” | A JavaScriptre épülő műveletek később válhatnak elérhetővé. |
 | „SSR csak MPA-ban létezik.” | Egy SPA kezdeti oldalához is használható. |
-
-## Megismert fogalmak
-
-- **Szerveroldali renderelés (SSR):** A nézet fontos HTML-tartalmának a szerveren, a kérés kiszolgálása közben történő előállítása.
-- **Hidratálás:** A már meglévő HTML felülethez kliensoldali JavaScript-állapot és eseménykezelés kapcsolása.
-- **Első HTML-válasz:** Az oldal fő dokumentumának HTTP-válasza, amely SSR esetén a fontos tartalmat is tartalmazhatja.

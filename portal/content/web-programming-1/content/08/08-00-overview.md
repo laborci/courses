@@ -7,6 +7,7 @@ children:
   - "[[08-04-passwords-mfa-and-sessions.md]]"
   - "[[08-05-https-and-its-limits.md]]"
   - "[[08-06-owasp-and-security-review.md]]"
+  - "[[08-00-glossary.md]]"
 ---
 # Webbiztonsági alapok
 

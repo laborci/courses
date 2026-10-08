@@ -70,10 +70,3 @@ flowchart LR
 | „A `HttpOnly` minden XSS-kárt megakadályoz.” | A cookie olvasását korlátozza, a sérült oldalon futó kód más műveletekre képes lehet. |
 | „A CORS megakadályozza a CSRF-et.” | A CORS főként a válasz böngészős olvasását szabályozza. |
 | „Elég minden különleges karaktert törölni.” | A helyes kezelés az értelmezési környezettől függ; SQL-nél paraméterezés kell. |
-
-## Megismert fogalmak
-
-- **XSS:** Nem megbízható tartalom végrehajtható szkriptként való megjelenése egy weboldalon.
-- **CSRF:** Bejelentkezett böngésző nem szándékolt, más oldalról kiváltott kérése.
-- **Injekció:** Amikor egy értelmező az adatot az utasítás szintaxisaként kezeli.
-- **Paraméterezett lekérdezés:** Lekérdezési szerkezet és felhasználói érték külön továbbítása az adatbázisnak.

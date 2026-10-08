@@ -7,6 +7,7 @@ children:
   - "[[09-04-user-perceived-performance.md]]"
   - "[[09-05-searchability-and-content-quality.md]]"
   - "[[09-06-privacy-tracking-and-digital-ethics.md]]"
+  - "[[09-00-glossary.md]]"
 ---
 # A minőségi web
 

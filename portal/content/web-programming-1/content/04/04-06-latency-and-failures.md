@@ -48,10 +48,3 @@ Egyetlen mérés nem általánosít minden felhasználóra. A hálózat, a hely,
 | „A 404 azt jelenti, hogy nincs hálózat.” | A 404 már HTTP-válasz egy elért webes rendszertől. |
 | „Ha a HTML 200-as, minden rendben.” | A további erőforrások vagy a felhasználói művelet hibázhatnak. |
 | „Minden késés egymás után, ugyanabban a sorrendben adódik össze.” | Gyorsítótár, párhuzamosság és újrahasznált kapcsolat módosíthatja az idővonalat. |
-
-## Megismert fogalmak
-
-- **Késleltetés:** Az a várakozási idő, amely a kapcsolat, adatátvitel vagy feldolgozás egy szakaszához kapcsolódik.
-- **Kapcsolati hiba:** Olyan probléma, amely miatt a kívánt végponttal nem jön létre a szükséges kapcsolat, akár HTTP-válasz nélkül.
-- **Részhiba:** Egy oldal erőforrásláncának olyan hibája, amely mellett más részek továbbra is működhetnek.
-- **Idővonal:** A kérések, válaszok és feldolgozási események időbeli képe, amely segíthet a késés forrásának megtalálásában.

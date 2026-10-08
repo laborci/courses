@@ -51,9 +51,3 @@ Hibrid megoldásnál az egyes oldalak vagy oldalelemek külön stratégiát köv
 | „SSG = JavaScript nélküli oldal.” | Interaktív program is kapcsolható a kész HTML-hez. |
 | „Egy alkalmazásnak egyetlen renderelési stratégiát kell választania.” | Oldalak és elemek eltérő igényeket követhetnek. |
 | „Az első gyors HTML garantálja a gyors interakciót.” | A későbbi programmunka és adatkérés is számít. |
-
-## Megismert fogalmak
-
-- **Statikus oldalgenerálás (SSG):** A HTML közzététel előtti előállítása és kész dokumentumként történő kiszolgálása.
-- **Hibrid renderelés:** Több renderelési stratégia együttes alkalmazása eltérő oldalakhoz vagy oldalelemekhez.
-- **Közzétételi folyamat:** A tartalmi forrásból a kiszolgálható statikus állományokat létrehozó és kiadó lépések sora.

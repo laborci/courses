@@ -54,11 +54,3 @@ A kompatibilitás nem egyszeri pecsét. A tartalom és a felület változásáva
 | „Ha nálam működik, mindenhol működik.” | Egy böngésző és beállítás csak egy vizsgálati környezet. |
 | „A szabványosság minden eltérést kizár.” | A támogatottság és a környezetek eltérhetnek; ellenőrzés továbbra is kell. |
 | „Elég a böngésző nevét ellenőrizni.” | A szükséges képesség tényleges meglétét célszerű vizsgálni. |
-
-## Megismert fogalmak
-
-- **Böngészőkompatibilitás:** A webes tartalom és alapvető feladatok használhatósága a célzott böngészőkben és környezetekben.
-- **Fokozatos fejlesztés:** Használható alapra épülő fejlesztés, amelyhez a fejlettebb megjelenés és viselkedés fokozatosan társul.
-- **Képességvizsgálat:** Annak ellenőrzése, hogy egy szükséges böngészőfunkció ténylegesen elérhető-e.
-- **Támogatottsági táblázat:** Böngészők és verziók szerint összegzett információ egy webes technológia ismert támogatásáról. Tervezési támpont, nem helyettesíti a tényleges működés ellenőrzését.
-- **Tartalék megoldás:** A hiányzó vagy hibás fejlettebb funkció mellett is követhető út az alapvető célhoz.

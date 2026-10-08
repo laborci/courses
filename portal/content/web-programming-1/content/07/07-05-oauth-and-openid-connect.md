@@ -54,11 +54,3 @@ Az alkalmazás saját munkamenete külön életciklust is kaphat a külső szolg
 | „A hozzáférési token megmondja a kliensnek, ki a felhasználó.” | Az erőforrás-szervernek szánt hozzáférést képviseli, nem általános identitásállítás. |
 | „Az ID tokennel bármely API meghívható.” | Az ID token a kliensnek szóló hitelesítési állítás, nem API-hozzáférési token. |
 | „Külső belépés után minden helyi művelet engedett.” | A helyi szolgáltatás saját jogosultsági döntése továbbra is szükséges. |
-
-## Megismert fogalmak
-
-- **OAuth 2.0:** Delegált hozzáféréshez használt keretrendszer, amelyben a kliens korlátozott jogosultságot kaphat egy védett erőforrás használatához.
-- **OpenID Connect (OIDC):** OAuth 2.0-ra épülő hitelesítési protokoll, amely ellenőrizhető felhasználói identitásinformációt adhat a kliensnek.
-- **Erőforrás-szerver:** A védett API-adatot vagy műveletet kínáló szolgáltatás, amely a megfelelő hozzáférési tokent ellenőrzi.
-- **ID token:** OIDC-ben a kliensnek szánt, a hitelesítés eredményét kifejező token.
-- **Delegált hozzáférés:** Olyan engedélyezés, amelyben egy alkalmazás a felhasználó jelszavának megismerése nélkül kap korlátozott hozzáférést más szolgáltatás erőforrásához.

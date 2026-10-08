@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="border-t border-frame">
-          <a class="flex w-full items-center justify-center px-4 py-2 text-center text-xs font-medium text-accent hover:bg-surface hover:underline" href={`${base}/${course.slug.split('/').map(encodeURIComponent).join('/')}/`}>Open course</a>
+          <a class="flex w-full items-center justify-center px-4 py-2 text-center text-xs font-medium text-accent hover:bg-surface hover:underline" href={`${base}/${course.slug.split('/').map(encodeURIComponent).join('/')}/`}>Open</a>
         </div>
       </Card>
     {/each}

@@ -96,11 +96,3 @@ Az összetettebb webes alkalmazások több lehetőséget adnak, de új problém�
 | „A Web 2.0 egy új internet.” | A kifejezés szolgáltatási és használati szemléletet jelöl. |
 | „A statikus weboldal elavult.” | Sok esetben gyorsabb, olcsóbb és biztonságosabb megoldás. |
 | „Minden modern weboldal egy SPA.” | Sok korszerű szolgáltatás más renderelési és navigációs modellt használ. |
-
-## Megismert fogalmak
-
-- **Hipertext:** Olyan dokumentumszervezési elv, amelyben hivatkozások vezetnek más dokumentumokhoz vagy dokumentumrészekhez. A webes navigáció egyik alapja.
-- **Statikus weboldal:** Olyan oldal, amelynek kiszolgált tartalma előre elkészíthető, és nem kell minden kérésnél egyedileg előállítani. Ez nem jelenti azt, hogy a böngészőben ne lehetne interaktív.
-- **Dinamikus weboldal:** Olyan oldal, amelynek tartalma kérés, felhasználói állapot vagy más adat alapján változhat. Az előállítás történhet szerveroldalon vagy a böngészőben is.
-- **Platformweb:** Olyan webes szolgáltatási modell, amely felhasználókat, tartalmakat és gyakran más szolgáltatásokat kapcsol össze. Értékének egy része a résztvevők közötti kapcsolatokból származik.
-- **Webalkalmazás:** Böngészőből használható, feladatvégzést támogató interaktív szoftver. A felület és a háttérrendszer webes szabványok útján kommunikálhat.

@@ -54,9 +54,3 @@ A felület által mutatott állapot és a szerver hivatalos állapota eltérhet.
 | „Állapotmentes HTTP mellett nem lehet bejelentkezés.” | Cookie, token és szerveroldali munkamenet összekötheti a kéréseket. |
 | „A szerver nem tárol adatot, ha a HTTP állapotmentes.” | A protokoll üzenete és az alkalmazás adattárolása külön fogalom. |
 | „A kliens által látott férőhely a végleges igazság.” | A szerver a művelet pillanatában dönt az aktuális állapotról. |
-
-## Megismert fogalmak
-
-- **Állapotmentes HTTP:** A HTTP azon tulajdonsága, hogy a kérésekhez nem jár automatikusan korábbi kérésekből örökölt alkalmazási beszélgetésállapot.
-- **Alkalmazási állapot:** A szolgáltatás működéséhez szükséges, időben változó adat, például kiválasztás vagy elfogadott jelentkezés.
-- **Munkamenet:** Egymáshoz kapcsolt felhasználói műveletek és kérések alkalmazási szintű összefüggése.

@@ -50,10 +50,3 @@ Az identitásszolgáltatónál történő sikeres belépés után a kurzusrendsz
 | „Egyszeri belépés = minden alkalmazásban ugyanaz a jogosultság.” | A helyi jogosultságok külön döntések. |
 | „Külső belépéskor az alkalmazás megkapja a külső jelszót.” | Szabványos átirányításos folyamatban a jelszó a szolgáltatónál marad. |
 | „Egy kijelentkezés biztosan minden munkamenetet megszüntet.” | A központi és helyi munkamenetek élettartama eltérhet. |
-
-## Megismert fogalmak
-
-- **Egyszeri bejelentkezés (SSO):** Több alkalmazásban használható identitás-ellenőrzési elrendezés, amely csökkentheti az ismételt hitelesítési lépéseket.
-- **Identitásszolgáltató:** A felhasználó hitelesítését végző, erről más alkalmazások számára ellenőrizhető információt adó szolgáltatás.
-- **Külső bejelentkezés:** Olyan belépési folyamat, amelyben az alkalmazás egy másik szervezet identitásszolgáltatójára támaszkodik.
-- **Helyi munkamenet:** Egy adott alkalmazás által a sikeres belépés után fenntartott saját felhasználói állapot.

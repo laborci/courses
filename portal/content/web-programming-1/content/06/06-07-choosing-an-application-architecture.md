@@ -53,10 +53,3 @@ Ezek nem végleges receptek. A táblázat csak azt mutatja, hogyan indulhat el a
 | „SSG csak egyszerű, interakció nélküli oldalhoz jó.” | Statikus HTML mellett dinamikus elemek is működhetnek. |
 | „SSR minden esetben gyorsabb, mint CSR.” | A szerver, hálózat és kliens munkája együtt számít. |
 | „A service worker megold minden offline problémát.” | Csak a tervezett, tárolható tartalom és művelet működhet megfelelően. |
-
-## Megismert fogalmak
-
-- **Alkalmazásmodell:** A felület navigációját és kliens–szerver felelősségeit szervező megközelítés, például MPA vagy SPA.
-- **Renderelési stratégia:** Annak megválasztása, hol és mikor áll elő a felület fontos tartalma.
-- **Hibrid architektúra:** Eltérő oldalak vagy elemek számára különböző navigációs, renderelési és adatkezelési megoldások együttese.
-- **Első használható tartalom:** A felhasználó alapvető céljához szükséges, megjelent és értelmezhető információ a felületen.

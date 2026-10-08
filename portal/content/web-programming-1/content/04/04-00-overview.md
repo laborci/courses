@@ -7,6 +7,7 @@ children:
   - "[[04-04-proxies-and-cdns.md]]"
   - "[[04-05-complete-web-request.md]]"
   - "[[04-06-latency-and-failures.md]]"
+  - "[[04-00-glossary.md]]"
 ---
 # Egy webes kérés teljes útja
 

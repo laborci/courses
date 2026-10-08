@@ -71,11 +71,3 @@ Például egy erőforrás törlése után a második DELETE-kérés más státus
 | „A POST miatt az adat titkos.” | A metódus nem helyettesíti a HTTPS-t és a jogosultságellenőrzést. |
 | „Az URL önmagában megmondja a műveletet.” | A metódus is a kérés jelentésének része. |
 | „Az idempotens mindig ugyanazt a választ adja.” | A kívánt szerverállapot lehet azonos eltérő válaszkód mellett is. |
-
-## Megismert fogalmak
-
-- **HTTP-metódus:** A kérés szándékát jelző szabványos elem. A szerver a célzott erőforrással együtt értelmezi.
-- **GET:** Erőforrás lekérésére szolgáló, rendeltetése szerint üzleti állapotot nem módosító HTTP-metódus. Gyakori böngészős navigációnál.
-- **POST:** Adat feldolgozására vagy művelet indítására használt HTTP-metódus. Ismétlése nem feltétlenül vezet ugyanahhoz az üzleti állapothoz.
-- **Biztonságos metódus:** Olyan metódus, amelynek rendeltetése nem a szerver alkalmazási állapotának módosítása. A fogalom nem a kapcsolat titkosítottságát jelenti.
-- **Idempotencia:** Olyan műveleti tulajdonság, amelynél az ismételt végrehajtás a kívánt szerverállapot szempontjából ugyanarra az eredményre vezet, mint az egyszeri végrehajtás.

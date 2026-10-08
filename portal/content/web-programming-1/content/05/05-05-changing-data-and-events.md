@@ -53,10 +53,3 @@ A **webhook** esetén egy szolgáltatás esemény bekövetkezésekor HTTP-kéré
 | „SSE-ben mindkét fél ugyanazon a csatornán küld eseményt.” | Az SSE szervertől kliens felé tartó eseményfolyam. |
 | „A webhook a böngésző értesítése.” | Jellemzően szolgáltatás küld HTTP-kérést másik szolgáltatásnak. |
 | „A kijelzett szabad hely biztos foglalás.” | A szervernek a jelentkezés pillanatában külön ellenőriznie kell az állapotot. |
-
-## Megismert fogalmak
-
-- **Polling:** Ismételt kliensoldali lekérdezés, amely időközönként friss adatot kér a szervertől.
-- **Server-Sent Events (SSE):** HTTP-alapú, szervertől kliens felé tartó eseményfolyam.
-- **WebSocket:** Tartós, kétirányú üzenetváltást támogató webes kommunikációs protokoll.
-- **Webhook:** Esemény által kiváltott HTTP-kérés egyik szolgáltatástól egy másik előre megadott végponthoz.

@@ -40,10 +40,3 @@ A böngésző a same-origin policyt, CORS-t és cookie-szabályokat érvényesí
 | „Az OWASP Top 10 minden lehetséges támadást felsorol.” | Kiemelt kockázati kategóriákat ad, nem teljes fenyegetési modellt. |
 | „Ha a lista tíz eleme zöld, a rendszer biztonságos.” | Az alkalmazás saját adatfolyamait és változásait is vizsgálni kell. |
 | „A böngésző biztonsági szabályai kiváltják a szerver ellenőrzését.” | A szervernek önállóan kell hitelesítenie és engedélyeznie a műveleteket. |
-
-## Megismert fogalmak
-
-- **OWASP:** Webalkalmazás-biztonsági tudást és útmutatókat közzétevő nyílt szakmai közösség.
-- **OWASP Top 10:** Fontos webalkalmazás-biztonsági kockázatokat összefoglaló, időről időre frissülő lista.
-- **Cheat Sheet Series:** Konkrét biztonsági témákhoz adott gyakorlati OWASP-útmutatók.
-- **Biztonsági áttekintés:** Adatfolyamok és ellenőrzések vizsgálata meghatározott fenyegetési modell alapján.

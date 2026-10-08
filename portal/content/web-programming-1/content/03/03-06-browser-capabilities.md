@@ -89,13 +89,3 @@ A képesség megléte önmagában nem indok a használatára. A felhasználói c
 | „A helyi mentés biztos biztonsági másolat.” | A böngésző tárhelye korlátozott vagy törölhető lehet; export és szinkron külön feladat. |
 | „A WebGL minden eszközön garantáltan működik.” | A tényleges grafikus környezet elérhetőségét ellenőrizni kell. |
 | „Az API létezése biztos sikert jelent.” | A feltételek és a művelet eredménye külön kérdések. |
-
-## Megismert fogalmak
-
-- **Böngésző API:** A böngésző által a webes programnak kínált programozható felület, amely meghatározott feltételekkel tesz elérhetővé funkciókat.
-- **File API:** A felhasználó által kiválasztott fájlok adatainak böngészőbeli kezelésére szolgáló felület. A kiválasztás nem azonos a feltöltéssel.
-- **IndexedDB:** Webhely eredetéhez kötött böngészős adatbázis-API, amely strukturált adatok helyi tárolását és tranzakciós kezelését teszi lehetővé.
-- **Canvas 2D:** A `canvas` elemen programból létrehozott kétdimenziós rajzolás felülete.
-- **WebGL:** Böngészős grafikus API, amely `canvas` felületen interaktív, grafikus hardvert használó 2D és 3D megjelenítést tesz lehetővé.
-- **Képességvizsgálat:** Annak ellenőrzése, hogy az alkalmazáshoz szükséges böngészőfunkció ténylegesen használható-e.
-- **Tartalék megoldás:** A hiányzó vagy sikertelen képesség mellett is értelmes felhasználói út vagy információ.

@@ -46,10 +46,3 @@ Az MPA–SPA különbség elsősorban a navigáció és az alkalmazás felépít
 | „Az SPA minden kattintáskor új HTML-dokumentumot kér.” | Gyakran a meglévő dokumentumban vált nézetet. |
 | „Az SPA mindig gyorsabb.” | Az első betöltés, programfutás és hálózati adatkérés is számít. |
 | „Az MPA vagy SPA automatikusan meghatározza a renderelést.” | A navigációs modell és a renderelési stratégia külön döntés. |
-
-## Megismert fogalmak
-
-- **Többoldalas alkalmazás (MPA):** Olyan webalkalmazási modell, amelyben a különböző nézetekhez jellemzően külön HTML-dokumentumok tartoznak.
-- **Egyoldalas alkalmazás (SPA):** Olyan modell, amelyben a már betöltött kliensalkalmazás gyakran a jelenlegi dokumentumon belül vált nézetet és kér új adatot.
-- **Kliensoldali navigáció:** Nézetváltás, amelyet a böngészőben futó program kezel új teljes dokumentum betöltése nélkül.
-- **Mély link:** Egy alkalmazás konkrét belső nézetét közvetlenül megnyitó URL.

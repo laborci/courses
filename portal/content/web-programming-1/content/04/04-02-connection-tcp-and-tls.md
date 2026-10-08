@@ -46,11 +46,3 @@ Ha a kapcsolat létrejött, a HTTP szabályai szerint kérés és válasz halad 
 | „A DNS-válasz után azonnal megjelenik az oldal.” | Kapcsolat, HTTP-válasz és böngészős feldolgozás is szükséges lehet. |
 | „A tanúsítvány a felhasználó bejelentkezését igazolja.” | A szokásos webes esetben a szerver azonosítását segíti. |
 | „Minden HTTPS-kapcsolat TCP-t használ.” | A HTTP/3 QUIC-ra épül, amely más szállítási utat használ. |
-
-## Megismert fogalmak
-
-- **TCP:** Kapcsolatorientált szállítási protokoll, amely megbízható, sorrendezett bájtfolyamot nyújt a végpontok között.
-- **TLS:** A kommunikáció titkosságát, sértetlenségét és a másik fél hitelesítését támogató protokoll.
-- **TLS-kézfogás:** A védett kapcsolat kezdeti egyeztetése, amelyben a felek többek között a szerver tanúsítványát és a titkosítás feltételeit kezelik.
-- **Tanúsítvány:** Digitálisan igazolt adat, amely a weben a szerver kulcsát a megnevezett domainhez köti.
-- **HTTP/3:** A HTTP egyik változata, amely QUIC-on keresztül működik, ezért nem a klasszikus TCP-re épülő útvonalat követi.

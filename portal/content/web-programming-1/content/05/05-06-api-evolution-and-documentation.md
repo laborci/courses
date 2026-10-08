@@ -57,11 +57,3 @@ A szolgáltató és a kliens együttműködését érdemes a régi és új klien
 | „Új mező mindig törő változás.” | Opcionális bővítés sok esetben kezelhető a régi kliensek számára. |
 | „A verziószám önmagában megőrzi a kompatibilitást.” | A régi szerződés tényleges fenntartása és az átmenet is számít. |
 | „Egy mintaválasz teljes dokumentáció.” | A hibák, feltételek és mezőjelentések külön leírást igényelnek. |
-
-## Megismert fogalmak
-
-- **Visszafelé kompatibilitás:** Az új API-változat olyan tulajdonsága, amely mellett a korábbi szerződésre épülő kliensek tovább működhetnek.
-- **Törő változás:** Olyan módosítás, amely a korábbi szerződést használó kliensek működését megsértheti.
-- **API-verzió:** A szolgáltatás szerződésének megkülönböztetett változata, amelyhez kliens és szolgáltató ugyanazt az elvárást társítja.
-- **API-dokumentáció:** A műveletek, adatok, hibák és változások követhető leírása a kliensek készítői számára.
-- **OpenAPI:** HTTP API-k képességeinek szabványos, géppel is feldolgozható leírási formája.

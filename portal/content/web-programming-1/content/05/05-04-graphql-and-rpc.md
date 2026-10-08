@@ -52,10 +52,3 @@ REST-nél az erőforrás és a HTTP-művelet, GraphQL-nél a séma és mezővál
 | „RPC csak egy konkrét protokoll neve.” | Elsősorban műveletközpontú kapcsolódási szemlélet. |
 | „GraphQL mindig egyetlen gyors kérés.” | A szerver munkája és az adatigény összetettsége továbbra is számít. |
 | „Egyetlen stílus minden API-nál helyes.” | A feladat és a szerződés minősége dönt. |
-
-## Megismert fogalmak
-
-- **GraphQL:** Sémára épülő API-lekérdezési nyelv és futtatási modell, amelyben a kliens a kívánt mezőket nevezi meg.
-- **Séma:** A GraphQL-szolgáltatás által kínált típusok, mezők és műveletek meghatározása.
-- **Lekérdezés:** Adatkérés, amely GraphQL esetén a kívánt mezők szerkezetét is megadja.
-- **RPC:** Távoli eljáráshívási szemlélet, amelyben a kliens megnevezett műveletet kezdeményez és választ kap.

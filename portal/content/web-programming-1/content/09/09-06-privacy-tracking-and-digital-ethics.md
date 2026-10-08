@@ -70,13 +70,3 @@ Képzeljünk el egy egyetemi rendezvényoldalt. A hírlevélhez e-mail-címet k�
 **„Ha nem kérünk nevet, nincs személyes adat.”** Egy tartós azonosító vagy több jel együtt továbbra is kapcsolható lehet emberhez vagy eszközhöz.
 
 **„Az adatvédelmi tájékoztató megoldja az etikai problémát.”** A hosszú, érthetetlen tájékoztató nem teszi tisztességessé a manipulatív vagy aránytalan gyakorlatot.
-
-## Megismert fogalmak
-
-**Adatminimalizálás:** csak a célhoz szükséges adatok kezelése.  
-**Cookie:** a böngésző által tárolt, kérésekhez kapcsolható kis adat.  
-**Első fél / harmadik fél:** a felkeresett oldal üzemeltetője, illetve a beágyazott külső szolgáltató.  
-**Hozzájárulás:** a felhasználó tájékozott, önkéntes döntése egy adott célról.  
-**Nyomkövetés:** viselkedés vagy eszköz ismételt felismerése és összekapcsolása.  
-**Sötét minta:** megtévesztő vagy aránytalan felületi megoldás, amely befolyásolja a döntést.  
-**Ujjlenyomat:** több böngésző- és eszközjellemzőből képzett azonosítási jel.

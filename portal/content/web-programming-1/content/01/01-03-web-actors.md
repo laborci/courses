@@ -80,11 +80,3 @@ Ezek miatt egyetlen oldal megnyitásakor több szervezettel és technikai rendsz
 | „A szerver egyetlen fizikai számítógép.” | A szerver lehet szoftveres szerep, virtuális gép vagy több rendszer együttese is. |
 | „A keresőmotor hozza létre a weboldalakat.” | A kereső megtalálja és rangsorolja a mások által publikált tartalmat. |
 | „A tárhelyszolgáltató mindenért felel az oldalon.” | A tartalom, az adatkezelés és a szolgáltatás szabályai jellemzően a tartalomszolgáltató felelősségei. |
-
-## Megismert fogalmak
-
-- **Kliens:** A kommunikációban szolgáltatást vagy erőforrást kérő program. Webes helyzetben ez gyakran a böngésző, de más alkalmazás is lehet.
-- **Webszerver:** HTTP-kéréseket fogadó és rájuk választ adó szoftver vagy rendszer. Kiszolgálhat állományokat, illetve továbbíthat kéréseket egy alkalmazásnak.
-- **Tartalomszolgáltató:** A weben elérhető tartalomért vagy szolgáltatásért felelős személy vagy szervezet. Nem feltétlenül azonos az infrastruktúra üzemeltetőjével.
-- **Keresőmotor:** Webes tartalmak feltérképezését, indexelését és kereshetőségét biztosító szolgáltatás. Találatai egy saját indexből származnak, ezért nem fedik le szükségszerűen a teljes webet.
-- **CDN:** Földrajzilag elosztott szerverek hálózata, amely a tartalmat a felhasználóhoz közeli vagy alkalmas helyről kézbesíti. Célja lehet a késleltetés csökkentése és a terhelés elosztása.

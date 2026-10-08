@@ -52,10 +52,3 @@ Ha a kéréshez nem tartozik elfogadott identitás, a szolgáltatás hitelesít�
 | „Aki be van jelentkezve, bármit megtehet.” | A jogosultság műveletenként és erőforrásonként változhat. |
 | „A gomb elrejtése tiltja az API-hívást.” | A szervernek külön ellenőriznie kell a jogosultságot. |
 | „A hitelesítés és a jogosultság ugyanaz.” | Az előbbi identitásra, az utóbbi műveleti engedélyre válaszol. |
-
-## Megismert fogalmak
-
-- **Hitelesítés:** Egy szereplő identitására vonatkozó állítás ellenőrzése és elfogadása.
-- **Jogosultságkezelés:** Annak eldöntése és érvényesítése, hogy egy szereplő elvégezhet-e egy műveletet egy erőforráson.
-- **Szerepkör:** A felhasználóhoz rendelt, több jogosultsági döntésben használható kategória.
-- **Erőforrásszintű engedély:** Konkrét adatra vagy objektumra vonatkozó hozzáférési döntés, például egy oktató saját kurzusának módosítása.

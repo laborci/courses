@@ -33,7 +33,7 @@ export function normalizeTag(tag: string): string {
   return tag.trim().toLocaleLowerCase('hu').normalize('NFD').replace(/\p{M}/gu, '').replace(/\s+/gu, ' ');
 }
 
-export type ContentGraph = { pages: ContentPage[]; navigation: NavItem[]; courses: Course[] };
+export type ContentGraph = { branding?: string; pages: ContentPage[]; navigation: NavItem[]; courses: Course[] };
 const parser = unified().use(remarkParse).use(remarkGfm).use(remarkMath);
 const external = /^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i;
 
@@ -48,6 +48,27 @@ export function youtubeId(url: string): string | null {
     }
     return id && /^[\w-]{11}$/.test(id) ? id : null;
   } catch { return null; }
+}
+
+export function interactiveEmbed(url: string): { src: string; title: string; className: string } | null {
+  const video = youtubeId(url);
+  if (video) return { src: `https://www.youtube-nocookie.com/embed/${video}`, title: 'YouTube video', className: 'youtube' };
+  try {
+    const parsed = new URL(url);
+    if (!['https:', 'http:'].includes(parsed.protocol) || parsed.username || parsed.password) return null;
+    if (['desmos.com', 'www.desmos.com'].includes(parsed.hostname)) {
+      const graph = parsed.pathname.match(/^\/(calculator|3d)\/([a-zA-Z0-9]+)\/?$/);
+      if (graph) return { src: `https://www.desmos.com/${graph[1]}/${graph[2]}?embed`, title: graph[1] === '3d' ? 'Desmos 3D graph' : 'Desmos graph', className: 'math-embed' };
+    }
+    if (['geogebra.org', 'www.geogebra.org'].includes(parsed.hostname)) {
+      const material = parsed.pathname.match(/^\/m\/([a-zA-Z0-9]+)\/?$/);
+      if (material) return {
+        src: `https://www.geogebra.org/material/iframe/id/${material[1]}/width/1000/height/600/border/888888/rc/true/ai/false/sdz/true/smb/false/stb/false/stbh/false/ld/false/sri/true/sfsb/true`,
+        title: 'GeoGebra activity', className: 'math-embed'
+      };
+    }
+  } catch { /* Unsupported URLs remain ordinary links. */ }
+  return null;
 }
 
 async function renderSource(tree: MarkdownRoot, usedIds: Set<string>) {
@@ -87,13 +108,13 @@ async function renderSource(tree: MarkdownRoot, usedIds: Set<string>) {
           }
           if (node.tagName === 'p' && node.children.length === 1 && parentNode && index !== undefined) {
             const link = node.children[0];
-            if (link.type !== 'element' || link.tagName !== 'a') return;
-            const id = youtubeId(String(link.properties.href));
-            if (!id) return;
+            if (link.type !== 'element' || link.tagName !== 'a' || link.properties['data-embed'] !== 'true') return;
+            const embed = interactiveEmbed(String(link.properties.href));
+            if (!embed) return;
             parentNode.children[index] = {
               type: 'element', tagName: 'iframe', properties: {
-                src: `https://www.youtube-nocookie.com/embed/${id}`, title: 'YouTube video',
-                loading: 'lazy', allowFullScreen: true, className: ['youtube'],
+                src: embed.src, title: embed.title,
+                loading: 'lazy', allowFullScreen: true, className: [embed.className],
                 referrerPolicy: 'strict-origin-when-cross-origin'
               }, children: []
             };
@@ -152,6 +173,22 @@ export async function buildGraph(contentRoot: string, entrypoint: string, base =
       return { path: link.url, title: toString(link).trim() };
     });
     const tree = parser.parse(body) as MarkdownRoot;
+    // GFM autolinks split [[https://...]] into text + link + text.
+    // Rejoin those nodes before processing regular wiki links.
+    visit(tree, 'paragraph', paragraph => {
+      for (let i = 1; i < paragraph.children.length - 1; i++) {
+        const before = paragraph.children[i - 1];
+        const link = paragraph.children[i];
+        const after = paragraph.children[i + 1];
+        if (before.type !== 'text' || link.type !== 'link' || after.type !== 'text'
+          || !before.value.endsWith('[[') || !after.value.startsWith(']]')) continue;
+        before.value = before.value.slice(0, -2);
+        after.value = after.value.slice(2);
+        link.data = { ...link.data, hProperties: { 'data-embed': 'true' } };
+        if (!before.value) { paragraph.children.splice(i - 1, 1); i--; }
+        if (!after.value) paragraph.children.splice(i + 1, 1);
+      }
+    });
     const references = new Map<string, string>();
     visit(tree, 'definition', node => { references.set(node.identifier, node.url); });
     visit(tree, (node, index, parent) => {
@@ -171,6 +208,10 @@ export async function buildGraph(contentRoot: string, entrypoint: string, base =
         if (!url) continue;
         if (match.index! > cursor) parts.push({ type: 'text', value: node.value.slice(cursor, match.index) });
         const link: Link = { type: 'link', url, children: match[2] ? [{ type: 'text', value: match[2].trim() }] : [] };
+        if (external.test(url)) {
+          if (!link.children.length) link.children = [{ type: 'text', value: url }];
+          link.data = { hProperties: { 'data-embed': 'true' } };
+        }
         wikiLinks.add(link);
         parts.push(link);
         cursor = match.index! + match[0].length;
@@ -234,6 +275,8 @@ export async function buildGraph(contentRoot: string, entrypoint: string, base =
       .sort((a, b) => b.directory.length - a.directory.length)[0]?.slug ?? null;
   }
   const catalog = await document(start);
+  if (catalog.metadata.branding !== undefined && typeof catalog.metadata.branding !== 'string') throw new Error(`Invalid branding in ${start}: expected text`);
+  graph.branding = typeof catalog.metadata.branding === 'string' ? catalog.metadata.branding.trim() : '';
   const coursePaths = referencePaths(catalog.metadata.courses, 'courses', start);
   for (const path of coursePaths) {
     const file = await markdownTarget(start, path);
@@ -415,7 +458,7 @@ export async function generate() {
   const graph = await buildGraph(resolve(config.contentRoot), config.entrypoint, process.env.BASE_PATH || '', resolve('static/content-assets'));
   await mkdir('src/lib/generated', { recursive: true });
   await writeFile('src/lib/generated/content.json', JSON.stringify(graph));
-  await writeFile('src/lib/generated/catalog.json', JSON.stringify({ page: graph.pages.find(page => page.slug === '')!, courses: graph.courses }));
+  await writeFile('src/lib/generated/catalog.json', JSON.stringify({ branding: graph.branding || '', page: graph.pages.find(page => page.slug === '')!, courses: graph.courses }));
   await writeFile('static/.nojekyll', '');
   console.log(`Generated ${graph.pages.length} pages in ${graph.courses.length} courses.`);
   return graph;

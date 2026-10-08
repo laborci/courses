@@ -44,10 +44,3 @@ A szétválasztás rugalmasságot ad, de új felelősségeket is teremt. A böng
 | „Az API a HTTP helyett működik.” | A webes API gyakran HTTP-üzeneteket használ. |
 | „Az API csak mobilalkalmazásokhoz kell.” | Böngészős, szerveroldali és más kliensek is használhatják. |
 | „Ha a válasz 200, a kliens biztosan érti.” | A válasz adatstruktúrájának is meg kell felelnie a szerződésnek. |
-
-## Megismert fogalmak
-
-- **API:** Programok közötti kapcsolódási felület, amely meghatározott műveleteket és adatformákat tesz elérhetővé.
-- **Webes API:** Hálózaton, jellemzően HTTP-n elérhető API, amelyhez kliensprogramok kéréseket küldenek.
-- **API-szerződés:** A kérések, válaszok, hibák és feltételek dokumentált megállapodása a szolgáltatás és kliensei között.
-- **Kliens:** Az API-t használó program, például böngészős felület, mobilalkalmazás vagy másik szerver.

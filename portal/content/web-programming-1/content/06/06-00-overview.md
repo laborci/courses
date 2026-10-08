@@ -8,6 +8,7 @@ children:
   - "[[06-05-navigation-and-client-state.md]]"
   - "[[06-06-service-workers-and-offline.md]]"
   - "[[06-07-choosing-an-application-architecture.md]]"
+  - "[[06-00-glossary.md]]"
 ---
 # Webes alkalmazások és renderelési stratégiák
 

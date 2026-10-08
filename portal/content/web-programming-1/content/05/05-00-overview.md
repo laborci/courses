@@ -7,6 +7,7 @@ children:
   - "[[05-04-graphql-and-rpc.md]]"
   - "[[05-05-changing-data-and-events.md]]"
   - "[[05-06-api-evolution-and-documentation.md]]"
+  - "[[05-00-glossary.md]]"
 ---
 # Webes adatok és API-k
 

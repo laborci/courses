@@ -75,12 +75,3 @@ A különbség a Network panelben láthatóvá válik: a kéréshez tartozó vá
 | „A Content-Type létrehozza a formátumot.” | A küldő jelzi vele a törzs formátumát; a tartalomnak ténylegesen meg kell felelnie ennek. |
 | „Minden kérésben van törzs.” | A szokásos GET-kérésnek nincs törzse. |
 | „Az Accept és a Content-Type ugyanaz.” | Az előbbi a kívánt választ, az utóbbi a küldött törzset írja le. |
-
-## Megismert fogalmak
-
-- **HTTP-fejléc:** A kérés vagy válasz értelmezését segítő név–érték információ. A kezdősor után, a törzs előtt helyezkedik el.
-- **Üzenettörzs:** A HTTP-üzenet opcionális tartalmi része. Kérésben elküldött adatot, válaszban az eredmény tartalmát hordozhatja.
-- **Médiatípus:** A továbbított tartalom formátumát jelölő azonosító, például `text/html` vagy `application/json`. A fogadó fél ennek alapján választhat feldolgozási módot.
-- **Content-Type:** A küldött üzenettörzs médiatípusát jelző fejléc. Kérésben és válaszban is előfordulhat.
-- **Accept:** A kliens által kívánt vagy elfogadható válaszformátumokat jelző kérésfejléc. Nem azonos a ténylegesen kapott tartalom típusával.
-- **Cache-Control:** A gyorsítótárazásra vonatkozó utasításokat hordozó fejléc. Hatása a válasz és a gyorsítótár teljes működésének kontextusában értelmezhető.

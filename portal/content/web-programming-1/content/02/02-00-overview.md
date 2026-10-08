@@ -7,6 +7,7 @@ children:
   - "[[02-04-http-status-codes.md]]"
   - "[[02-05-headers-body-and-content-types.md]]"
   - "[[02-06-reading-network-panel.md]]"
+  - "[[02-00-glossary.md]]"
 ---
 # Webcímek és HTTP-alapok
 

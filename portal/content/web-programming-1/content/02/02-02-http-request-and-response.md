@@ -79,13 +79,3 @@ A címben a `http://` vagy `https://` jelzi az elérés módját. A HTTPS védet
 | „Egy oldal megnyitása egyetlen kérés.” | A dokumentum további erőforráskéréseket indíthat. |
 | „A 200 azt jelenti, hogy minden rendben van.” | Csak a HTTP-szintű sikeres választ jelzi. |
 | „A HTTPS másik kérés–válasz modell.” | Ugyanazt a HTTP-modellt védett kapcsolaton használja. |
-
-## Megismert fogalmak
-
-- **HTTP:** A webes kliens és szerver közötti alkalmazási kommunikáció szabályrendszere. Meghatározza a kérések és válaszok jelentését.
-- **HTTP-kérés:** A kliens által küldött üzenet, amely erőforrást vagy műveletet céloz. Metódust, célt, fejléceket és esetenként törzset tartalmaz.
-- **HTTP-válasz:** A szerver által küldött üzenet a kérés eredményéről. Státuszkódot, fejléceket és szükség esetén törzset tartalmaz.
-- **Metódus:** A kérés célzott műveletének jelentését jelző HTTP-elem. A GET tipikusan lekérésre, a POST feldolgozásra küldött adat vagy művelet kezdeményezésére szolgál.
-- **Fejléc:** A HTTP-üzenet értelmezéséhez kapcsolódó név–érték információ. Például a `Content-Type` a továbbított tartalom típusát jelzi.
-- **Törzs:** A HTTP-üzenet fejlécek utáni tartalmi része. Nem minden kérésnek vagy válasznak van törzse.
-- **Státuszkód:** A válasz háromjegyű eredményjelzése. A kliens ebből tudhatja meg a kérés HTTP-szintű kimenetelét.

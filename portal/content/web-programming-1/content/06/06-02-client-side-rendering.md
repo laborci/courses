@@ -45,10 +45,3 @@ Az alkalmazás adatmodellje és a megjelenő DOM nem azonos. A kurzuslista adata
 | „A JavaScript letöltése után az oldal kész.” | Futtatás, adatlekérés és renderelés még hátra lehet. |
 | „A kliensoldali váltás mindig hálózatmentes.” | Friss adathoz új API-kérés kellhet. |
 | „CSR = SPA.” | A renderelés helye és a navigációs modell eltérő tengely. |
-
-## Megismert fogalmak
-
-- **Kliensoldali renderelés (CSR):** A felület jelentős részének böngészőben, JavaScript segítségével történő előállítása.
-- **HTML-váz:** Kezdeti dokumentum, amely a kliensoldali alkalmazás számára kiinduló szerkezetet ad.
-- **Betöltési állapot:** A felület olyan állapota, amelyben a szükséges program vagy adat még nem áll rendelkezésre.
-- **Kliensoldali adatmodell:** A böngészőben kezelt adatok és állapot, amelyek alapján a program megjeleníti a felületet.

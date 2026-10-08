@@ -87,19 +87,3 @@ Egy rövid döntési jegyzet sokat érhet. Például: „A nyilvános eseményli
 **„A cache csak teljesítményoptimalizálás.”** A cache adatkezelési szabály. Lejárata, érvénytelenítése és megosztási köre befolyásolhatja a helyességet és az adatvédelmet is.
 
 **„A kompromisszum azt jelenti, hogy valamelyik célról lemondunk.”** Nem feltétlenül. Gyakran azt jelenti, hogy a védelem vagy a teljesítmény a megfelelő helyre kerül, nem pedig mindenhol azonos erővel jelenik meg.
-
-## Megismert fogalmak
-
-**Kompromisszum (trade-off):** olyan tudatos döntés, amelyben egy cél javítása érdekében elfogadunk egy másik célhoz kapcsolódó korlátot vagy költséget.
-
-**Késleltetés:** az adat vagy kérés egyik pontból a másikba jutásához, illetve a válasz előállításához szükséges idő.
-
-**Gyorsítótár (cache):** korábban előállított adat vagy válasz ideiglenes tárolása, hogy később ne kelljen újra előállítani.
-
-**CDN:** földrajzilag elosztott kiszolgálói hálózat, amely a felhasználóhoz közelebb tud nyilvános tartalmat szolgáltatni.
-
-**Sebességkorlátozás (rate limiting):** annak szabályozása, hogy egy felhasználó, IP-cím vagy kliens adott idő alatt hány kérést indíthat.
-
-**Adatminimalizálás:** csak a szükséges személyes vagy üzleti adat gyűjtése, tárolása és továbbítása.
-
-**Teljes életciklus-költség:** az induláson túl a fejlesztés, üzemeltetés, felügyelet, javítás és módosítás összes költsége.

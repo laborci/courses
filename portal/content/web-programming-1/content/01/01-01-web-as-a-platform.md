@@ -93,11 +93,3 @@ Egy ilyen rendszer megértéséhez nincs szükség arra, hogy minden hallgató m
 | „A tárgy csak HTML-ről és weboldalak kinézetéről szól.” | A web ennél tágabb: kommunikáció, biztonság, adatok, böngészők és szolgáltatások rendszere. |
 | „A technológiák úgyis gyorsan változnak, ezért a tárgy hamar elavul.” | A konkrét eszközök változnak, de a protokollok, szabványok és alapelvek hosszabb távon is fontosak. |
 | „A webes kérdések csak a fejlesztő feladatai.” | Biztonsági, adatvédelmi, üzemeltetési és termékdöntések is kapcsolódnak hozzájuk. |
-
-## Megismert fogalmak
-
-- **Webes platform:** Nyílt webes szabványokra épülő technológiai környezet, amelyen dokumentumok, szolgáltatások és alkalmazások működnek. Különböző eszközök böngészői közös interfészen érhetik el.
-- **Webes API:** Programok közötti, webes technológiákon keresztül elérhető interfész. Meghatározza, milyen kérések tehetők és milyen válaszok várhatók.
-- **Interoperabilitás:** Különböző rendszerek együttműködési képessége közös formátumok és szabályok alapján. A weben ez például azt jelenti, hogy ugyanaz a szolgáltatás többféle böngészőből használható.
-- **Akadálymentesség:** Digitális tartalom és szolgáltatás olyan kialakítása, amely eltérő képességű és használati helyzetű emberek számára is hozzáférést ad. Ide tartozik például a billentyűzetes kezelhetőség és az értelmezhető dokumentumszerkezet.
-- **Adatvédelem:** A személyes adatok kezelésére vonatkozó jogi, szervezési és műszaki elvek összessége. Célja, hogy az adatkezelés indokolt, átlátható és biztonságos legyen.

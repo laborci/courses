@@ -52,10 +52,3 @@ Más API-stílus is lehet indokolt. Ha a kliens sokféle összekapcsolt adatból
 | „Minden POST létrehozás.” | A konkrét szerződés más feldolgozást is rendelhet hozzá. |
 | „Állapotmentes = a szerver nem tárol adatot.” | A kérések közötti beszélgetésállapotról szól, nem az adatbázis hiányáról. |
 | „Főnévi URL-től minden API REST lesz.” | A HTTP-szemantika és a további architekturális korlátok is számítanak. |
-
-## Megismert fogalmak
-
-- **REST:** Erőforrásokra, reprezentációkra és meghatározott kliens–szerver korlátokra épülő architekturális stílus.
-- **Erőforrás-azonosító:** Az erőforrást megnevező webes cím, amelyhez különböző HTTP-műveletek kapcsolódhatnak.
-- **Állapotmentes kérés:** Olyan kérés, amely az értelmezéséhez szükséges információt maga hordozza, előző alkalmazásszintű beszélgetésállapot nélkül.
-- **Reprezentáció:** Az erőforrásnak a kliens számára átadott formája, például JSON-válasz.

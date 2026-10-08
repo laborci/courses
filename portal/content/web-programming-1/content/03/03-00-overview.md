@@ -7,6 +7,7 @@ children:
   - "[[03-04-loading-web-resources.md]]"
   - "[[03-05-browser-compatibility.md]]"
   - "[[03-06-browser-capabilities.md]]"
+  - "[[03-00-glossary.md]]"
 ---
 # Böngésző és webes dokumentum
 

@@ -83,16 +83,3 @@ Az e-mailes visszaigazolások várakozási sorba kerülnek: a hallgató előbb a
 **„A rate limit csak a rosszindulatú támadókat érinti.”** Jóindulatú, de hibás vagy túl gyakran újrapróbáló klienst is érinthet; ezért az üzenet és a szabály méltányossága számít.
 
 **„A fokozatos leállás azt jelenti, hogy hibásan működhet a rendszer.”** Épp ellenkezőleg: előre meghatározott, biztonságos korlátozásokat jelent a kontrollálatlan hiba helyett.
-
-## Megismert fogalmak
-
-- **Terhelés:** a rendszerre érkező feldolgozási igény, például kérések vagy háttérfeladatok mennyisége.
-- **Kapacitás:** az a terhelési szint, amelyet a rendszer elvárt minőség mellett kezelni tud.
-- **p95 válaszidő:** az az idő, amelyen belül a kérések 95%-a teljesül.
-- **Rate limit:** kérési gyakoriság tudatos korlátozása egy kliens vagy azonosító számára.
-- **Queue / várakozási sor:** később feldolgozható feladatok pufferelt sorozata.
-- **Graceful degradation:** kevésbé fontos funkciók kontrollált korlátozása a lényeges működés megőrzésére.
-- **Log:** részletes, eseményszintű naplóbejegyzés.
-- **Metric:** összesített, időben követhető mérőszám.
-- **Trace:** egy kérés teljes útjának összekapcsolt nyoma több komponensen át.
-- **Riasztási fáradtság:** túl sok vagy rosszul célzott riasztás miatti figyelemvesztés.

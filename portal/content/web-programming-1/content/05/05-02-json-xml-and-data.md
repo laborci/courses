@@ -61,11 +61,3 @@ A formátumválasztás tehát csak az első réteg. A valódi adatcsere szerződ
 | „A `Content-Type` minden mező jelentését leírja.” | Csak a törzs formátumát jelzi. |
 | „Az XML és a HTML ugyanaz.” | Mindkettő jelölőnyelv, de más célú szabályokat és használatot követnek. |
 | „Egy mintaválaszból minden lehetséges állapot kiderül.” | A hiányzó mezők és hibák külön dokumentációt igényelnek. |
-
-## Megismert fogalmak
-
-- **JSON:** Objektumokat, listákat és alapvető értéktípusokat szövegként leíró adatcsere-formátum.
-- **XML:** Elemekből és attribútumokból felépülő, hierarchikus jelölőnyelv, amely adatot és dokumentumszerű tartalmat is leírhat.
-- **Strukturált adat:** Meghatározott szerkezetű és jelentésű információ, amelyet a program mezők és típusok szerint dolgoz fel.
-- **Reprezentáció:** Egy erőforrás vagy adat adott formátumú megjelenése a HTTP-válaszban.
-- **Adatséma:** Az adatok alakját, típusait és megengedett kapcsolatait leíró szabályrendszer.

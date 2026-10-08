@@ -46,10 +46,3 @@ A munkamenet nem tarthat örökké feltétel nélkül. Lejárhat, a felhasznál�
 | „A böngésző minden cookie-t minden kéréshez elküld.” | A hatókör és attribútumok korlátozzák a küldést. |
 | „A kijelentkezés csak a gomb feliratának cseréje.” | A szerveroldali hozzáférést is meg kell szüntetni. |
 | „Minden helyi adatot cookie-ban kell tárolni.” | Böngészős tárolófelületek más célra alkalmasabbak. |
-
-## Megismert fogalmak
-
-- **Cookie:** A böngésző által tárolható kis adat, amely a szabályai szerint későbbi HTTP-kérésekhez csatolható.
-- **Munkamenet-azonosító:** Olyan érték, amely alapján a szolgáltatás egy kérést a megfelelő munkamenethez köthet.
-- **Szerveroldali munkamenet:** A szolgáltatásnál kezelt, azonosítóval elérhető felhasználói állapot.
-- **Cookie-attribútum:** A cookie kezelését korlátozó vagy leíró beállítás, például `Secure`, `HttpOnly` vagy `SameSite`.

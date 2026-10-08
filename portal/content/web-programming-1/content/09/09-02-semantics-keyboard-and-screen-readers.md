@@ -82,17 +82,3 @@ Már fejlesztés közben sok hiba felfedezhető különleges eszköz nélkül. T
 **„A placeholder a mező címkéje.”** Nem az. Rövid segítség lehet, de nem pótolja az állandó, programból is azonosítható címkét.
 
 **„Mindenhez ARIA kell.”** A túlzott vagy rossz ARIA éppenséggel ronthat a helyzeten. A szemantikus HTML sok feladatot eleve megold.
-
-## Megismert fogalmak
-
-**Szemantikus HTML:** a tartalom szerepéhez illő, jelentést hordozó HTML-elemek használata.
-
-**Fókusz:** az az elem, amely a billentyűzetes bevitel következő célpontja.
-
-**Fókuszsorrend:** az elemek bejárásának sorrendje billentyűzetes navigáció közben.
-
-**Képernyőolvasó:** beszéddel vagy Braille-kijelzőn közvetítő segítő technológia.
-
-**Landmark:** nagyobb oldalrégiót jelölő szerkezeti elem, például `main` vagy `nav`.
-
-**ARIA:** a dinamikus és összetett webes vezérlők akadálymentességi információit kiegészítő attribútumkészlet.

@@ -3,7 +3,7 @@ import { mkdtemp, mkdir, writeFile, rm } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { stringify } from 'yaml';
-import { buildGraph, youtubeId } from './content';
+import { buildGraph, youtubeId, interactiveEmbed } from './content';
 import { courseMenu } from '../src/lib/course-menu';
 import { breadcrumbPath } from '../src/lib/breadcrumb';
 import { readingOrder } from '../src/lib/reading-order';
@@ -53,7 +53,7 @@ test('propagates page chapters through serialized navigation and course menu wit
 });
 
 test('renders math, highlighted code, Mermaid and YouTube without raw HTML', async () => {
-  await fixture({ 'courses.md': '# Render\n\n$x^2$\n\n```js\nconst n = 1;\n```\n\n```mermaid\ngraph TD; A-->B\n```\n\n[Video](https://youtu.be/dQw4w9WgXcQ)\n\n<script>alert(1)</script>' }, async root => {
+  await fixture({ 'courses.md': '# Render\n\n$x^2$\n\n```js\nconst n = 1;\n```\n\n```mermaid\ngraph TD; A-->B\n```\n\n[[https://youtu.be/dQw4w9WgXcQ]]\n\n<script>alert(1)</script>' }, async root => {
     const html = (await build(root)).pages[0].html;
     expect(html).toContain('katex'); expect(html).toContain('hljs-keyword');
     expect(html).toContain('mermaid-source'); expect(html).toContain('youtube-nocookie.com/embed/dQw4w9WgXcQ');
@@ -308,5 +308,43 @@ test('course metadata rejects obsolete fields and invalid author, omits missing 
       await writeFile(join(root, 'web/course.md'), md({ language: 'en', ...metadata }, '# Web'));
       await expect(build(root)).rejects.toThrow();
     }
+  });
+});
+
+
+test('embeds standalone Desmos and GeoGebra links and preserves inline or unsupported links', async () => {
+  await fixture({ 'courses.md': '# Tools\n\n[[https://www.desmos.com/calculator/abcdefghij]]\n\n[[https://www.geogebra.org/m/RHYH3UQ8]]\n\nInline [graph](https://www.desmos.com/calculator/abcdefghij).\n\nhttps://www.desmos.com/calculator/abcdefghij\n\n[Video](https://youtu.be/dQw4w9WgXcQ)\n\nhttps://www.geogebra.org/m/abc/extra\n\nhttps://desmos.com.evil.test/calculator/abc' }, async root => {
+    const html = (await build(root)).pages[0].html;
+    expect(html.match(/<iframe/g)).toHaveLength(2);
+    expect(html).toContain('https://www.desmos.com/calculator/abcdefghij?embed');
+    expect(html).toContain('https://www.geogebra.org/material/iframe/id/RHYH3UQ8/');
+    expect(html).toContain('title="GeoGebra activity"');
+    expect(html).toContain('class="math-embed"');
+    expect(html).toContain('Inline <a href="https://www.desmos.com/calculator/abcdefghij">graph</a>.');
+  });
+  for (const url of ['javascript:alert(1)', 'https://desmos.com.evil.test/calculator/abc', 'https://www.geogebra.org.evil.test/m/abc', 'https://www.geogebra.org/m/abc/extra', 'https://www.desmos.com/calculator', 'https://user:pass@www.desmos.com/calculator/abc']) {
+    expect(interactiveEmbed(url)).toBeNull();
+  }
+  expect(interactiveEmbed('http://desmos.com/calculator/abc123/?foo=bar')?.src).toBe('https://www.desmos.com/calculator/abc123?embed');
+});
+
+
+test('embeds a Desmos 3D graph using explicit wiki syntax', async () => {
+  await fixture({ 'courses.md': '# 3D\n\n[[https://www.desmos.com/3d/8bc9821344]]\n\nhttps://www.desmos.com/3d/8bc9821344' }, async root => {
+    const html = (await build(root)).pages[0].html;
+    expect(html.match(/<iframe/g)).toHaveLength(1);
+    expect(html).toContain('src="https://www.desmos.com/3d/8bc9821344?embed"');
+    expect(html).toContain('title="Desmos 3D graph"');
+    expect(html).toContain('<a href="https://www.desmos.com/3d/8bc9821344">');
+  });
+});
+
+
+test('reads optional catalog branding as trimmed text', async () => {
+  await fixture({ 'courses.md': md({ branding: '  University of Pécs FEIT  ' }, '# Courses') }, async root => {
+    expect((await build(root)).branding).toBe('University of Pécs FEIT');
+  });
+  await fixture({ 'courses.md': '# Courses' }, async root => {
+    expect((await build(root)).branding).toBe('');
   });
 });

@@ -64,11 +64,3 @@ Ha egy szöveg a Network válaszában még nem, az aktuális DOM-ban viszont má
 | „A nagy betűs szöveg automatikusan címsor.” | A vizuális méret nem helyettesíti a megfelelő HTML-elemet. |
 | „Minden kattintható elem gomb.” | A natív gomb szemantikája és billentyűzetes viselkedése külön tulajdonság. |
 | „A forrás és az Elements nézet mindig azonos.” | Feldolgozás és JavaScriptes változás miatt eltérhetnek. |
-
-## Megismert fogalmak
-
-- **DOM:** A HTML-dokumentum böngésző által létrehozott, faalakú objektummodellje. Az aktuális dokumentumállapotot reprezentálja, és programból módosítható.
-- **Csomópont:** A DOM-fa egy eleme, például HTML-elem vagy szöveg. Más csomópontokkal szülő–gyermek kapcsolatban állhat.
-- **HTML-forrás:** A böngészőnek átadott szöveges jelölés, amelyből a dokumentummodell épül. Nem feltétlenül azonos a később módosult DOM-mal.
-- **Szemantikus HTML:** A tartalom jelentésének megfelelő elemek használata. Segíti a dokumentum értelmezését és hozzáférhetőségét.
-- **Elements/Inspector nézet:** A böngésző fejlesztői eszközének felülete az aktuális DOM és a hozzá kapcsolódó jellemzők vizsgálatára. Más megfigyelési pontot ad, mint a Network panel.

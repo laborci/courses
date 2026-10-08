@@ -60,11 +60,3 @@ A tervezésnél hasznos kérdés, hogy melyik erőforrás hiánya akadályozza a
 | „A kevesebb kérés mindig gyorsabb oldalt jelent.” | Az erőforrás mérete, időzítése és feldolgozása is számít. |
 | „Minden képet érdemes késleltetni.” | Az első nézet fontos képeit időben kell betölteni. |
 | „Ha minden fájl letöltődött, a felület kész.” | A böngésző feldolgozás és későbbi adatkérés miatt tovább változhat. |
-
-## Megismert fogalmak
-
-- **Webes erőforrás:** A böngésző által külön címen lekérhető dokumentum, kép, stíluslap, programfájl, betűkészlet vagy adat. Több erőforrás együtt alkothat egy oldalt.
-- **Erőforrásfüggőség:** Olyan kapcsolat, amelyben egy dokumentum vagy más erőforrás további tartalomra hivatkozik. A függőség új kérést válthat ki.
-- **Kritikus erőforrás:** Az első használható vagy lényeges megjelenítéshez szükséges erőforrás. Késése közvetlenül befolyásolhatja a felhasználói élményt.
-- **Lusta betöltés:** Bizonyos erőforrások letöltésének elhalasztása addig, amíg várhatóan szükség lesz rájuk. Csak megfelelő helyzetben javítja a felhasználói élményt.
-- **Részhiba:** Olyan helyzet, amikor az oldal egyes kérései sikerülnek, mások nem. A felület ettől részben még használható maradhat.

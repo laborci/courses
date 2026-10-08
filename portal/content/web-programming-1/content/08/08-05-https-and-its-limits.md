@@ -37,10 +37,3 @@ Ha egy HTTPS-oldal nem védett HTTP-erőforrást próbál betölteni, vegyes tar
 | „HTTPS esetén az alkalmazás biztonságos.” | A hálózati kapcsolat védelme nem helyettesíti az alkalmazási ellenőrzéseket. |
 | „A lakat bizonyítja, hogy a webhely jóindulatú.” | A tanúsítvány a kapcsolódó névhez tartozó szervert igazolja, nem a szolgáltatás szándékát. |
 | „A TLS minden belső szakaszt automatikusan véd.” | A TLS-végpont után külön kommunikációs szakasz lehet. |
-
-## Megismert fogalmak
-
-- **HTTPS:** HTTP-forgalom TLS-sel védett kapcsolaton.
-- **TLS-végpont:** A hálózati hely, ahol a védett kapcsolat véget ér.
-- **Vegyes tartalom:** HTTPS-oldal által nem védett HTTP-kapcsolaton betöltött erőforrás.
-- **Tanúsítvány-ellenőrzés:** A kapcsolódó név és a kiszolgáló igazolásának ellenőrzése.

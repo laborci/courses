@@ -52,10 +52,3 @@ Ha sütiket vagy más hitelesítési adatot is kezel a kereszt-eredetű kérés,
 | „Másik útvonal már másik origin.” | Az útvonal nem része az originnek. |
 | „A CORS-hiba azt jelenti, hogy nem ment el kérés.” | Bizonyos esetekben a kérés elmehetett, csak a válasz nem olvasható a szkriptből. |
 | „Minden CORS-kérés előtt van OPTIONS.” | Preflight csak meghatározott kereszt-eredetű kérésekhez szükséges. |
-
-## Megismert fogalmak
-
-- **Origin:** A séma, hosztnév és port hármasa.
-- **Same-origin policy:** A böngésző eredetek közötti hozzáférést korlátozó alapelve.
-- **CORS:** A szerver által HTTP-fejlécekkel jelzett, böngészőben érvényesülő kereszt-eredetű olvasási engedélyrendszer.
-- **Preflight:** Bizonyos kereszt-eredetű kéréseket megelőző `OPTIONS` ellenőrző kérés.

@@ -54,10 +54,3 @@ A címsor az URL-t mutatja. A Network panel a böngésző által indított kér�
 | „A DNS után már HTTP-kérés következik.” | Kapcsolat- és védelmi lépésekre is szükség lehet. |
 | „A 200-as HTML-válasz kész oldalt jelent.” | A böngészőnek további erőforrásokra és feldolgozásra is szüksége lehet. |
 | „Minden megnyitás ugyanazt a teljes láncot ismétli.” | Gyorsítótár és kapcsolat-újrahasználat lépéseket hagyhat ki. |
-
-## Megismert fogalmak
-
-- **Webes kérés életciklusa:** Az URL értelmezésétől a kapcsolat és HTTP-üzeneteken át a böngészőben használható eredményig tartó folyamat.
-- **Szolgáltatói belépési pont:** A nyilvános kérés első szolgáltatóoldali végpontja, amely közvetítőként vagy alkalmazásként tovább dolgozhat.
-- **Erőforráslánc:** A fő dokumentum és az általa közvetlenül vagy közvetve igényelt további erőforrások kapcsolata.
-- **Megfigyelési pont:** A rendszer működésének egy adott rétegét láthatóvá tevő nézet vagy adat, például Network-válasz vagy aktuális DOM.

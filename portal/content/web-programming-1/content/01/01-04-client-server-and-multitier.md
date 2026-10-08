@@ -95,13 +95,3 @@ Ebben a példában jól látszik, hogy a böngésző nem közvetlenül „írja 
 | „A szerver egyetlen gép.” | A szerver szerep, amelyet több gép vagy szolgáltatás is betölthet. |
 | „A három rétegnek három külön gépen kell futnia.” | A rétegek elsősorban logikai felelősségi körök. |
 | „A böngésző közvetlenül az adatbázishoz kapcsolódik.” | Általában az alkalmazási réteg közvetít és érvényesíti a szabályokat. |
-
-## Megismert fogalmak
-
-- **Kliens:** Egy kommunikációs kapcsolatban szolgáltatást vagy erőforrást kérő program. Ugyanaz a rendszer egy másik kapcsolatban szerverként is működhet.
-- **Szerver:** A kliens kérését fogadó és arra választ adó program vagy rendszer. A szerep logikai, nem feltétlenül egy fizikai géphez kötött.
-- **Kérés:** A kliens által küldött üzenet, amely erőforrást vagy műveletet jelöl meg. A weben a HTTP-kérés módszert, címet, fejléceket és esetenként törzset tartalmazhat.
-- **Válasz:** A szervernek egy kérésre adott üzenete. Eredményt, állapotjelzést és szükség szerint adatot tartalmaz.
-- **Prezentációs réteg:** A rendszer felhasználói interakcióért és megjelenítésért felelős logikai része. Nem azonos a prezentációs diasorral; weben gyakran a böngészős felület alkotja.
-- **Üzleti réteg:** A rendszer szabályait és folyamatait megvalósító logikai rész. Ellenőrizheti például egy művelet jogosultságát és feltételeit.
-- **Adatréteg:** Az adatok tárolását, lekérdezését és módosítását kezelő logikai rész. Az alkalmazás többi rétegétől elkülöníti az adattárolás részleteit.

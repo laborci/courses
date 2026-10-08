@@ -39,10 +39,3 @@ Egyetlen védelem nem váltja ki a többit. A titkosított kapcsolat nem dönti 
 | „Csak a bejelentkezési oldal biztonságérzékeny.” | A személyes adatok olvasása és az állapotváltoztató műveletek is azok. |
 | „A saját űrlapunkról érkező adat megbízható.” | A kérést a kliens vagy más program tetszőlegesen módosíthatja. |
 | „A biztonság egyetlen kapcsoló.” | Több határon külön ellenőrzések szükségesek. |
-
-## Megismert fogalmak
-
-- **Fenyegetési modell:** A védendő értékek, szereplők, támadói lehetőségek és feltételek rendezett leírása.
-- **Bizalmi határ:** Olyan pont, ahol egy adat vagy kérés más bizalmi feltételek közé kerül.
-- **Védendő érték:** Adat, művelet vagy szolgáltatási tulajdonság, amelynek sérülése kárt okoz.
-- **Rétegzett védelem:** Több, egymást kiegészítő ellenőrzés alkalmazása eltérő hibák és támadások ellen.

@@ -74,17 +74,3 @@ Nagy képernyőn visszatérhet a háromoszlopos elrendezés, mert ott az segíti
 **„Mobilon csak elrejtjük a nehéz részeket.”** Ha a rejtett rész a feladat teljesítéséhez kell, akkor inkább más formában legyen elérhető. A kevesebb nem jelenthet információvesztést.
 
 **„A hover menü modern, tehát jó.”** Kizárólag hoverrel nem mindenki éri el; szükséges billentyűzetes és érintéses működés is.
-
-## Megismert fogalmak
-
-**Reszponzív webdesign:** olyan tervezés és megvalósítás, amely a rendelkezésre álló körülményekhez igazítja az elrendezést és interakciót.
-
-**Viewport:** a böngészőben az oldal számára rendelkezésre álló megjelenítési terület.
-
-**Töréspont (breakpoint):** az a feltétel vagy méret, amelynél az elrendezés tudatosan megváltozik.
-
-**Mobile-first:** kisebb képernyőre épülő alapmegoldás, amely nagyobb helyen bővül.
-
-**Tartalmi prioritás:** a tartalom és műveletek fontossági sorrendjének tudatos kezelése.
-
-**Progresszív fejlesztés:** stabil alapélményre épülő, fokozatos képességbővítés.

@@ -7,6 +7,7 @@ children:
   - "[[10-04-http-cache-and-cdn.md]]"
   - "[[10-05-load-peaks-and-observability.md]]"
   - "[[10-06-performance-security-and-cost.md]]"
+  - "[[10-00-glossary.md]]"
 ---
 # Megbízható és nagy teljesítményű web
 

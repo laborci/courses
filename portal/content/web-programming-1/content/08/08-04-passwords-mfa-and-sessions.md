@@ -46,11 +46,3 @@ A cookie `Secure` attribútuma védett kapcsolathoz köti a küldést; a `HttpOn
 | „Az MFA után a munkamenet már nem fontos.” | A megszerzett munkamenet-azonosító továbbra is használható lehet. |
 | „A `HttpOnly` minden böngészős támadást kivéd.” | Csak a cookie közvetlen szkript-hozzáférését korlátozza. |
 | „A kijelentkezés csak kliensoldali állapot.” | A szervernek az elfogadott hozzáférést is érvénytelenítenie kell. |
-
-## Megismert fogalmak
-
-- **Jelszó-hash:** Jelszó ellenőrzéséhez tárolt, költséges eljárással képzett érték.
-- **Salt:** Egyedi, a jelszó-hash előállításakor használt érték.
-- **MFA:** Egymástól független tényezőcsaládokra támaszkodó hitelesítés.
-- **Munkamenet-eltérítés:** Egy érvényes munkamenet-azonosító jogosulatlan használata.
-- **Munkamenet-érvénytelenítés:** Az azonosítóhoz tartozó szerveroldali hozzáférés megszüntetése.
